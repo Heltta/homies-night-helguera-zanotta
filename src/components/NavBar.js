@@ -1,4 +1,5 @@
 import logo from '../images/logo.svg'
+import profile from '../images/profile.svg'
 const NavBar = () => {
     return (  
       <header>
@@ -16,6 +17,9 @@ const NavBar = () => {
             <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
+        <a id="UserProfile" href="#signin">
+            <img src={profile} alt="profile image"/>
+        </a>
       </header>
       );
   }
