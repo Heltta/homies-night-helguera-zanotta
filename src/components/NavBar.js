@@ -2,15 +2,18 @@ import logo from '../images/logo.svg'
 const NavBar = () => {
     return (  
       <header>
-        <img src={logo} alt="logo" />
-        <a id="brandName" href="">Homies Night</a>
+        
+        <a id="homebtn" href="#home">
+          <img src={logo} alt="logo" />
+          <span>Homies Night</span>
+        </a>
         <nav>
           <ul>
-            <li><a href="">Juegos de Mesa</a></li>
-            <li><a href="">Cool Merch</a></li>
-            <li><a href="">Calendario</a></li>
-            <li><a href="">Redes sociales</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="#boardgames">Juegos de Mesa</a></li>
+            <li><a href="#merch">Cool Merch</a></li>
+            <li><a href="#calendar">Calendario</a></li>
+            <li><a href="#social">Redes sociales</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
       </header>
