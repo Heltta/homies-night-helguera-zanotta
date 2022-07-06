@@ -1,5 +1,6 @@
 import logo from '../images/logo.svg'
 import profile from '../images/profile.svg'
+import '../css/NavBar.css'
 const NavBar = () => {
     return (  
       <header>
