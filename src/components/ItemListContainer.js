@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import '../css/ItemListContainer.css'
 
 class ItemListContainer extends Component{
     constructor(){
@@ -14,14 +15,20 @@ class ItemListContainer extends Component{
     }
     render (){
         const items = this.state.products.map( prod =>(
-            <li>{prod}</li>
+            <li className="producto">
+                <div>
+                    <span>{prod}</span>
+                    <span>Precio de {prod}</span>
+                </div>
+                <div>{prod} imagen</div>
+            </li>
         ))
         return(
             <div className="itemListContainer">
                 <h1>Hola soy el saludo del contenedor</h1>
-                <div>Breadcrumb: father/children/childrenOfChildren</div>
+                <div id="breeadcrumbs">Breadcrumb: father/children/childrenOfChildren</div>
                 <section>
-                    <ul>{items}</ul>
+                    <ul className="productList">{items}</ul>
                 </section>
             </div>
         );
