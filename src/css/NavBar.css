@@ -6,8 +6,8 @@ header{
 
     display: grid;
     grid-template-areas: 
-        "home nav user";
-    grid-template-columns: 1fr 8fr 1fr;
+        "home nav cart user";
+    grid-template-columns: 1fr 7fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     align-items: center;
@@ -61,8 +61,11 @@ header{
 #UserProfile{
     grid-area: user;
 }
-    #homebtn img,#UserProfile img{
+    #homebtn img,#UserProfile img, #cartwidget img{
         height: 3rem;
         width: 3rem;
         padding: 0 1rem;
     }
+#cartwidget{
+    grid-area: cart;
+}

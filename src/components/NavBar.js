@@ -1,6 +1,8 @@
 import logo from '../images/logo.svg'
 import profile from '../images/profile.svg'
+import CartWidget from './CartWidget.js'
 import '../css/NavBar.css'
+
 const NavBar = () => {
     return (  
       <header>
@@ -18,6 +20,7 @@ const NavBar = () => {
             <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
+        <CartWidget />
         <a id="UserProfile" href="#signin">
             <img src={profile} alt="profile"/>
         </a>
