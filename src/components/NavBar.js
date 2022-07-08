@@ -19,7 +19,7 @@ const NavBar = () => {
           </ul>
         </nav>
         <a id="UserProfile" href="#signin">
-            <img src={profile} alt="profile image"/>
+            <img src={profile} alt="profile"/>
         </a>
       </header>
       );
