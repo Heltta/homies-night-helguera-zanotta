@@ -8,7 +8,7 @@ function ItemCount(props){
         }
     }
     const restar = () =>{
-        if(0<count){
+        if(props.initial<count){
             setCount(count-1);
         }
     }
