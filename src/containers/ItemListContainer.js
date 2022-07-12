@@ -22,7 +22,7 @@ class ItemListContainer extends Component{
                     <span>Precio de {prod}</span>
                 </div>
                 <div>{prod} imagen</div>
-                <ItemCount />
+                <ItemCount  stock={5} initial={0} />
             </li>
         ))
         return(
