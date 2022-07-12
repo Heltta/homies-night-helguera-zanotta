@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import '../css/ItemListContainer.css'
+import ItemCount from './ItemCount.js'
 
 class ItemListContainer extends Component{
     constructor(){
@@ -21,6 +22,7 @@ class ItemListContainer extends Component{
                     <span>Precio de {prod}</span>
                 </div>
                 <div>{prod} imagen</div>
+                <ItemCount />
             </li>
         ))
         return(
