@@ -25,7 +25,7 @@ class ItemListContainer extends Component{
         ))
         return(
             <div className="itemListContainer">
-                <h1>Hola soy el saludo del contenedor</h1>
+                <h1>{this.props.saludo} a al sitio de {this.props.website}</h1>
                 <div id="breeadcrumbs">Breadcrumb: father/children/childrenOfChildren</div>
                 <section>
                     <ul className="productList">{items}</ul>
