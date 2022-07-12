@@ -1,14 +1,14 @@
 import React, {useState} from "react"
 
-function ItemCount(props){
-    const [count, setCount] = useState(props.initial);
+function ItemCount({ stock, initial, onAdd }){
+    const [count, setCount] = useState(initial);
     const sumar = () =>{
-        if(count<props.stock){
+        if(count<stock){
             setCount(count+1);
         }
     }
     const restar = () =>{
-        if(props.initial<count){
+        if(initial<count){
             setCount(count-1);
         }
     }
@@ -18,7 +18,7 @@ function ItemCount(props){
             <span>{count}</span>
             <button onClick={()=> sumar()}>+</button>
             <section>
-                <button onClick={() => props.onAdd(count)}>Agregar al carrito</button>
+                <button onClick={() => onAdd(count)}>Agregar al carrito</button>
             </section>
         </div>
     );
