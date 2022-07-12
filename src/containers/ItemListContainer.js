@@ -7,10 +7,10 @@ class ItemListContainer extends Component{
         super();
         this.state ={
             products:[
-                'Catan',
-                'Secret Hitler',
-                'Flick emm up',
-                'Murder in HongKong'
+                {name:'Catan', price: 40, stock:4},
+                {name:'Secret Hitler', price: 25, stock:2},
+                {name:'Flick emm up', price: 20, stock:1},
+                {name:'Murder in HongKong', price: 16, stock:3}
             ]
         };
     }
@@ -18,11 +18,15 @@ class ItemListContainer extends Component{
         const items = this.state.products.map( prod =>(
             <li className="producto">
                 <div>
-                    <span>{prod}</span>
-                    <span>Precio de {prod}</span>
+                    <span>{prod.name}</span>
+                    <span>{prod.price} dolares</span>
                 </div>
-                <div>{prod} imagen</div>
-                <ItemCount  stock={5} initial={0} />
+                <div>{prod.name} imagen</div>
+                <ItemCount  stock={prod.stock} 
+                            initial={1}
+                            onAdd={(amount) => {
+                                console.log(`Se agregaron '${prod.name}' X${amount} al carrito`)
+                            }}/>
             </li>
         ))
         return(

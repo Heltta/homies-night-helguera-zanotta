@@ -17,6 +17,9 @@ function ItemCount(props){
             <button onClick={()=> restar()}>-</button>
             <span>{count}</span>
             <button onClick={()=> sumar()}>+</button>
+            <section>
+                <button onClick={() => props.onAdd(count)}>Agregar al carrito</button>
+            </section>
         </div>
     );
 };
