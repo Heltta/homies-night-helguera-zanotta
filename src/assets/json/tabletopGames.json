@@ -1,0 +1,10 @@
+{
+    "tabletopGames": [
+        {"id": "0", "name": "Catan", "price": 111, "stock": "11"  },
+        {"id": "1", "name": "Secret Hitler", "price": 222, "stock": "22"  },
+        {"id": "2", "name": "Flick emm up", "price": 333, "stock": "33"  },
+        {"id": "3", "name": "Murder in HongKong", "price": 444, "stock": "44"  },
+        {"id": "4", "name": "Fede 5", "price": 555, "stock": "55"  },
+        {"id": "5", "name": "Fede 6", "price": 666, "stock": "66"  }
+    ]
+}
