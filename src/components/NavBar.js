@@ -1,5 +1,5 @@
-import logo from '../images/logo.svg'
-import profile from '../images/profile.svg'
+import logo from '../assets/images/logo.svg'
+import profile from '../assets/images/profile.svg'
 import CartWidget from './CartWidget.js'
 import '../css/NavBar.css'
 
