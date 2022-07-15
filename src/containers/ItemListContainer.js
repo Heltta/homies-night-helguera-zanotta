@@ -8,9 +8,9 @@ function ItemListContainer(props) {
     async function getBoardGames(){
         try{
             // const dataParse = await fetch('../assets/json/tabletopGames.json')
-            await fetch('../assets/json/data.json')
+            await fetch('./resources/tabletopGames.json')
                 .then((resp)=> resp.json())
-                .then((dataParse) => setBoardGames(dataParse));
+                .then((dataParse) => console.log(dataParse));
             // const dataParse = await resp.json();
             // setBoardGames(dataParse);
 
