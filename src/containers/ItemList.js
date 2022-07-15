@@ -3,9 +3,16 @@ import Item from "../components/Item";
 
 function ItemsList({products}) {
     return (
-        <ul>
-            {products.map(prod => <li key={prod.id}>{prod.name}</li> ) }
-        </ul>
+        <section>
+            <ul>
+                {products.map(prod => <Item 
+                    key={prod.id}
+                    id={prod.id}
+                    name={prod.name}
+                    price={prod.price}
+                    stock={prod.stock} /> ) }
+            </ul>
+        </section>
     )
 };
 
