@@ -31,9 +31,7 @@ function ItemListContainer(props) {
             <h1>{props.saludo} a al sitio de {props.website}</h1>
             <div id="breeadcrumbs">Breadcrumb: father/children/childrenOfChildren</div>
             <section>
-                <ul className="productList">
-                    <ItemList products={boardGames} />   
-                </ul>
+                <ItemList products={boardGames} />
             </section>
         </div>
     );
