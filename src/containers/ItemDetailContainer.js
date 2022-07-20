@@ -1,19 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ItemDetail from "../components/ItemDetail";
 
-const getItem = () =>{
+const getItem = (setState) =>{
     try{
-        // const dataParse = await fetch('../assets/json/tabletopGames.json')
         setTimeout(
             ()=>fetch('./resources/tabletopGames.json')
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
-                    setBoardGames(dataParse);
+                    setState(dataParse);
             }),
             2000
         )
-        // const dataParse = await resp.json();
-        // setBoardGames(dataParse);
 
     }catch(error){
         console.log(error);
@@ -21,11 +18,29 @@ const getItem = () =>{
 
 };
 
-function ItemDetailContainer(){
+function ItemDetailContainer({itemId=1}){
+    const [item, setItem] = useState();
+
+    useEffect(
+        ()=>{
+        getItem((jsonParseado)=>{
+            const filteredItem = jsonParseado.filter(boardGame => boardGame.id == itemId);
+            setItem(filteredItem);
+        });
+    },
+    [itemId])
+
+    useEffect(
+        ()=>{
+            console.log(item);
+        },
+        [item]
+    )
+
     return(
-        <>
-            <ItemDetail />
-        </>
+        <section className="itemDetailContainer">
+            {/* <ItemDetail /> */}
+        </section>
     )
 }
 
