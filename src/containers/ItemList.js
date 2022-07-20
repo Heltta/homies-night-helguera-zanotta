@@ -9,7 +9,8 @@ function ItemsList({products}) {
                 id={prod.id}
                 name={prod.name}
                 price={prod.price}
-                stock={prod.stock} /> ) }
+                stock={prod.stock}
+                photo={prod.photo} /> ) }
         </ul>
     )
 };

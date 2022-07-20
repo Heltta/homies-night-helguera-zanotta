@@ -1,8 +1,8 @@
 [
-        {"id": "0", "name": "Catan",                    "price": 111, "stock": "11", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "product image placeholder"  },
-        {"id": "1", "name": "Secret Hitler",            "price": 222, "stock": "22", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "product image placeholder"  },
-        {"id": "2", "name": "Flick emm up",             "price": 333, "stock": "33", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "product image placeholder"  },
-        {"id": "3", "name": "Murder in HongKong",       "price": 444, "stock": "44", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "product image placeholder"  },
-        {"id": "4", "name": "Fede 5",                   "price": 555, "stock": "55", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "product image placeholder"  },
-        {"id": "5", "name": "Fede 6",                   "price": 666, "stock": "66", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "product image placeholder"  }
+        {"id": "0", "name": "Catan",                    "price": 111, "stock": "11", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "./images/caja_catan.webp"  },
+        {"id": "1", "name": "Secret Hitler",            "price": 222, "stock": "22", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "./images/caja_secret_hitler.webp"  },
+        {"id": "2", "name": "Flick 'em up!",            "price": 333, "stock": "33", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "./images/caja_flick_em_up.webp"  },
+        {"id": "3", "name": "Murder in Hong Kong",      "price": 444, "stock": "44", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "./images/caja_murder_in_hong_kong.webp"  },
+        {"id": "4", "name": "Spyfall",                  "price": 555, "stock": "55", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "./images/caja_spyfall.webp"  },
+        {"id": "5", "name": "Sushi Go Party!",          "price": 666, "stock": "66", "description": "Descripcion placeholder del juego de mesa que esta muy bueno eh compralo", "photo": "./images/caja_sushi_go_part.webpy"  }
 ]
