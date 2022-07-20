@@ -1,0 +1,21 @@
+.itemDetail{
+    background-color: #13110E;
+    color: #FFFFFF;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    width: fit-content;
+    display: flex;
+}
+    .itemDetail img{
+        margin: 1rem;
+    }
+    .itemDetail section{
+        max-width: 50vh;
+    }
+        .itemDetail section div{
+            margin: 1rem;
+        }
+        .itemDetail section div:first-child{
+            font-size: 2rem;
+        }
