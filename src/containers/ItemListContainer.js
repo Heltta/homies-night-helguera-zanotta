@@ -13,7 +13,6 @@ function ItemListContainer(props) {
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
                     setBoardGames(dataParse);
-                    console.log(dataParse)
                 }),
                 2000
             )

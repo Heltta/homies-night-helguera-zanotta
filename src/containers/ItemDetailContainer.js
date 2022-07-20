@@ -9,7 +9,6 @@ const getItem = () =>{
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
                     setBoardGames(dataParse);
-                    console.log(dataParse)
             }),
             2000
         )
