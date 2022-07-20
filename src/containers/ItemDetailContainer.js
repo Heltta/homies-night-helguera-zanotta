@@ -19,12 +19,12 @@ const getItem = (setState) =>{
 };
 
 function ItemDetailContainer({itemId=1}){
-    const [item, setItem] = useState();
+    const [item, setItem] = useState({});
 
     useEffect(
         ()=>{
         getItem((jsonParseado)=>{
-            const filteredItem = jsonParseado.filter(boardGame => boardGame.id == itemId);
+            const filteredItem = jsonParseado.find(boardGame => boardGame.id == itemId);
             setItem(filteredItem);
         });
     },
@@ -39,7 +39,7 @@ function ItemDetailContainer({itemId=1}){
 
     return(
         <section className="itemDetailContainer">
-            {/* <ItemDetail /> */}
+            <ItemDetail item={item}/>
         </section>
     )
 }
