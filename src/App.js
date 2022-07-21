@@ -6,11 +6,13 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer saludo='Buenas noches y bienvenido' website='Homies Night'/>
-      <ItemDetailContainer itemId={1}/>
-    </>
+      <Routes >
+        <Route index path='/' element={<ItemListContainer saludo='Buenas noches y bienvenido' website='Homies Night'/>}/>
+        <Route path='/detail' element={<ItemDetailContainer itemId={1}/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
