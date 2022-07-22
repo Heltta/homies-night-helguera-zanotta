@@ -5,7 +5,8 @@
            "price":111,
            "stock":"11",
            "description":"Descripcion placeholder del juego de mesa que esta muy bueno eh compralo",
-           "photo":"/images/caja_catan.webp"
+           "photo":"/images/caja_catan.webp",
+           "category":"strategy"
         },
         {
            "id":"1",
@@ -13,7 +14,8 @@
            "price":222,
            "stock":"22",
            "description":"Descripcion placeholder del juego de mesa que esta muy bueno eh compralo",
-           "photo":"/images/caja_secret_hitler.webp"
+           "photo":"/images/caja_secret_hitler.webp",
+           "category":"deception"
         },
         {
            "id":"2",
@@ -21,7 +23,8 @@
            "price":333,
            "stock":"33",
            "description":"Descripcion placeholder del juego de mesa que esta muy bueno eh compralo",
-           "photo":"/images/caja_flick_em_up.webp"
+           "photo":"/images/caja_flick_em_up.webp",
+           "category":"dexterity"
         },
         {
            "id":"3",
@@ -29,7 +32,8 @@
            "price":444,
            "stock":"44",
            "description":"Descripcion placeholder del juego de mesa que esta muy bueno eh compralo",
-           "photo":"/images/caja_murder_in_hong_kong.webp"
+           "photo":"/images/caja_murder_in_hong_kong.webp",
+           "category":"deception"
         },
         {
            "id":"4",
@@ -37,7 +41,8 @@
            "price":555,
            "stock":"55",
            "description":"Descripcion placeholder del juego de mesa que esta muy bueno eh compralo",
-           "photo":"/images/caja_spyfall.webp"
+           "photo":"/images/caja_spyfall.webp",
+           "category":"deception"
         },
         {
            "id":"5",
@@ -45,6 +50,7 @@
            "price":666,
            "stock":"66",
            "description":"Descripcion placeholder del juego de mesa que esta muy bueno eh compralo",
-           "photo":"/images/caja_sushi_go_party.webp"
+           "photo":"/images/caja_sushi_go_party.webp",
+           "category":"casual"
         }
 ]
