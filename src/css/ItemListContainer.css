@@ -19,7 +19,7 @@
 
             border-color: #643206;
         }
-        .itemListContainer section .productList button{
+        .itemListContainer section .productList a button{
             display: block;
             width: 100%;
         }

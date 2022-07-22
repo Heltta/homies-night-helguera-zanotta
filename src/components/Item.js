@@ -10,7 +10,7 @@ function Item({id, name, price, stock, photo  }){
                 <span>{price} dolares</span>
             </div>
             <img src={photo} alt={`caja de ${name}`}/>
-            <button><Link to={`/item/${id}`}>Detalle</Link></button>
+            <Link to={`/item/${id}`}><button>Detalle</button></Link>
         </li>
     )
 };
