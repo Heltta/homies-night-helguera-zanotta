@@ -9,7 +9,7 @@ function ItemListContainer(props) {
         try{
             // const dataParse = await fetch('../assets/json/tabletopGames.json')
             setTimeout(
-                ()=>fetch('./resources/tabletopGames.json')
+                ()=>fetch('/resources/tabletopGames.json')
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
                     setBoardGames(dataParse);

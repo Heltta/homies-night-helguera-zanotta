@@ -16,7 +16,7 @@ function Item({id, name, price, stock, photo  }){
                         onAdd={(amount) => {
                             console.log(`Se agregaron '${name}' X${amount} al carrito`)
                         }}/>
-            <Link to={`/detail/${id}`}>Detalle</Link>
+            <Link to={`/item/${id}`}>Detalle</Link>
         </li>
     )
 };
