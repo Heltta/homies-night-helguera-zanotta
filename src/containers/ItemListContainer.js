@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from "react"
 import '../css/ItemListContainer.css'
 import ItemList from './ItemList.js'
+import {useParams} from "react-router-dom"
 
 function ItemListContainer(props) {
     const [boardGames, setBoardGames] = useState([]);
+    const { id } = useParams();
 
     async function getBoardGames(){
         try{
@@ -12,7 +14,8 @@ function ItemListContainer(props) {
                 ()=>fetch('/resources/tabletopGames.json')
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
-                    setBoardGames(dataParse);
+                    const filteredGames = dataParse.filter(juego=>juego.category==id);
+                    setBoardGames(filteredGames);
                 }),
                 2000
             )
