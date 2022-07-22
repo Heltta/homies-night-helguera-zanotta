@@ -14,8 +14,12 @@ function ItemListContainer(props) {
                 ()=>fetch('/resources/tabletopGames.json')
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
-                    const filteredGames = dataParse.filter(juego=>juego.category==id);
-                    setBoardGames(filteredGames);
+                    if(id!=undefined){
+                        const filteredGames = dataParse.filter(juego=>juego.category==id);
+                        setBoardGames(filteredGames);
+                    }else{
+                        setBoardGames(dataParse);
+                    }
                 }),
                 2000
             )
