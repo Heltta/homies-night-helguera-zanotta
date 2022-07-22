@@ -1,5 +1,6 @@
 import React from "react"
 import ItemCount from "../containers/ItemCount"
+import { Link } from "react-router-dom"
 
 
 function Item({id, name, price, stock, photo  }){
@@ -15,6 +16,7 @@ function Item({id, name, price, stock, photo  }){
                         onAdd={(amount) => {
                             console.log(`Se agregaron '${name}' X${amount} al carrito`)
                         }}/>
+            <Link to={`/detail/${id}`}>Detalle</Link>
         </li>
     )
 };
