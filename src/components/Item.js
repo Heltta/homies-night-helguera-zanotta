@@ -5,19 +5,20 @@ import { Link } from "react-router-dom"
 
 function Item({id, name, price, stock, photo  }){
     return(
-        <li id={id} className="producto">
-            <div>
-                <span>{name}</span>
-                <span>{price} dolares</span>
-            </div>
-            <img src={photo} alt={`caja de ${name}`}/>
-            <ItemCount  stock={stock} 
-                        initial={1}
-                        onAdd={(amount) => {
-                            console.log(`Se agregaron '${name}' X${amount} al carrito`)
-                        }}/>
-            <Link to={`/item/${id}`}>Detalle</Link>
-        </li>
+        <Link to={`/item/${id}`}>
+            <li id={id} className="producto">
+                <div>
+                    <span>{name}</span>
+                    <span>{price} dolares</span>
+                </div>
+                <img src={photo} alt={`caja de ${name}`}/>
+                <ItemCount  stock={stock} 
+                            initial={1}
+                            onAdd={(amount) => {
+                                console.log(`Se agregaron '${name}' X${amount} al carrito`)
+                            }}/>
+            </li>
+        </Link>
     )
 };
 
