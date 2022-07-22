@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom"
 const getItem = (setState) =>{
     try{
         setTimeout(
-            ()=>fetch('./resources/tabletopGames.json')
+            ()=>fetch('/resources/tabletopGames.json')
                 .then((resp)=> resp.json())
                 .then((dataParse) => {
                     setState(dataParse);
@@ -22,10 +22,10 @@ const getItem = (setState) =>{
 function ItemDetailContainer(){
     const [item, setItem] = useState({});
     const { itemId } = useParams();
-    useEffect(
-        ()=>{
-            console.log(itemId);
+    useEffect(()=>{
+        console.log(itemId);
         getItem((jsonParseado)=>{
+            console.log(jsonParseado);
             const filteredItem = jsonParseado.find(boardGame => boardGame.id == itemId);
             setItem(filteredItem);
         });
