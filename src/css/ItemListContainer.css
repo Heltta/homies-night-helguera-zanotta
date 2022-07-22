@@ -19,6 +19,10 @@
 
             border-color: #643206;
         }
+        .itemListContainer section .productList button{
+            display: block;
+            width: 100%;
+        }
 .producto div span{
     padding: 1rem;
 }
