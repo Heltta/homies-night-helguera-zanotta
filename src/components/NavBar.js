@@ -13,11 +13,10 @@ const NavBar = () => {
         </a>
         <nav>
           <ul>
-            <li><a href="/category/boardGames">Juegos de Mesa</a></li>
-            <li><a href="/category/coolMerch">Cool Merch</a></li>
-            <li><a href="/category/calendar">Calendario</a></li>
-            <li><a href="/category/social">Redes sociales</a></li>
-            <li><a href="/category/contact">Contacto</a></li>
+            <li><a href="/category/strategy">Estrategia</a></li>
+            <li><a href="/category/deception">Engaño</a></li>
+            <li><a href="/category/dexterity">Agilidad</a></li>
+            <li><a href="/category/casual">Casuales</a></li>
           </ul>
         </nav>
         <CartWidget />
