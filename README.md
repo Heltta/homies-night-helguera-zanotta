@@ -1,4 +1,4 @@
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Website navigation](react-proy-nav.gif)
 
 # Getting Started with Create React App
 
