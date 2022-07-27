@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import '../css/itemDetail.css'
 import ItemCount from "../containers/ItemCount"
+import { Link } from "react-router-dom"
 
 function ItemDetail({item}){
     const [quantity, setQuantity] = useState(0);
@@ -17,10 +18,11 @@ function ItemDetail({item}){
                 <div>{item?.price} dolares</div>
                 <div>{item?.description}</div>
                 {(quantity==0)?
-                (<ItemCount  stock={item?.stock} 
-                            initial={1}
-                            onAdd={storeQuantity}/>):
-                (<span>ItemCount eliminado</span>)
+                                (<ItemCount  stock={item?.stock} 
+                                            initial={1}
+                                            onAdd={storeQuantity}/>)
+                                            
+                                :(<Link to={`/cart`}><button>Terminar compra</button></Link>)
                 }
             </section>
             <img src={item?.photo} alt="tapa del juego"></img>
