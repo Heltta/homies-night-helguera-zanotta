@@ -23,9 +23,7 @@ function ItemDetailContainer(){
     const [item, setItem] = useState({});
     const { itemId } = useParams();
     useEffect(()=>{
-        console.log(itemId);
         getItem((jsonParseado)=>{
-            console.log(jsonParseado);
             const filteredItem = jsonParseado.find(boardGame => boardGame.id == itemId);
             setItem(filteredItem);
         });
