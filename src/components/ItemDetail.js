@@ -16,9 +16,12 @@ function ItemDetail({item}){
                 <div>{item?.name}</div>
                 <div>{item?.price} dolares</div>
                 <div>{item?.description}</div>
-                <ItemCount  stock={item?.stock} 
+                {(quantity==0)?
+                (<ItemCount  stock={item?.stock} 
                             initial={1}
-                            onAdd={storeQuantity}/>
+                            onAdd={storeQuantity}/>):
+                (<span>ItemCount eliminado</span>)
+                }
             </section>
             <img src={item?.photo} alt="tapa del juego"></img>
         </section>
