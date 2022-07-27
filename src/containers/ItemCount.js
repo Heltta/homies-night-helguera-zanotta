@@ -3,13 +3,6 @@ import React, {useState} from "react"
 function ItemCount({ stock, initial, onAdd }){
     const [count, setCount] = useState(initial);
 
-    React.useEffect(()=>{
-        console.log("itemCount mounted")
-        return ()=>{
-            console.log("ItemCount will unmount")
-        }
-    },[])
-
     const sumar = () =>{
         if(count<stock){
             setCount(count+1);
