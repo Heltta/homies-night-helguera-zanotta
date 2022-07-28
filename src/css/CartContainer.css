@@ -1,0 +1,72 @@
+.cartList{
+    padding: 1rem;
+}
+    .cartList ul{
+        list-style: none;
+        padding: 0rem;
+    }
+    .cartList button{
+        padding: 2.5px 5.5px;
+        border-radius: 5px;
+        border: 0px;
+
+        font-style: normal;
+        font-size: inherit;
+        line-height: inherit;
+
+        color: #FFFFFF;
+        background-color: #E46A0D;
+    }
+        .cartList ul li{
+            display: grid;
+            grid-template-areas: 
+                "img name name price"
+                "img utility . .";
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 20px;
+            align-items: start;
+
+            padding: 1rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            background-color: #082C4E;
+
+            color: #FFFFFF
+        }
+        .cartList ul li .itemName{
+            grid-area: name;
+            align-self: baseline;
+            margin: 1rem;
+        }
+        .cartList ul li img{
+            grid-area: img;
+        }
+        .cartList ul li .itemPrice{
+            grid-area: price;
+            align-self: baseline;
+            justify-self: end;
+
+            margin: 1rem;
+
+            font-size: 1rem;
+        }
+        .cartList ul li .cartItemUtility{
+            display: flex;
+            grid-area: utility;
+            align-self: end;
+
+            padding: 0.25rem 1rem;
+            align-items: baseline;
+        }
+            .cartList ul li .cartItemUtility .removeItem{
+                width: fit-content;
+                height: fit-content;
+                margin: 0.25rem;
+            }
+            .cartList ul li .cartItemUtility .itemQuantity{
+                margin: 0.25rem;
+            }
+        .cartList ul li .itemQuantity{
+            grid-area: qty;
+        }
