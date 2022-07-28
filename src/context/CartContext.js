@@ -10,6 +10,8 @@ function CartContextProvider({children}){
     const isInCart = (id) => 
         cartList.some( (listItem) => listItem.id === id );
 
+    const isCartEmpty = () => 
+        cartList.length === 0;
 
     const addToCart = (objItem) =>{
         if( !isInCart( objItem.id) ){
@@ -19,10 +21,14 @@ function CartContextProvider({children}){
         }
     }
 
+    const clearCart = () => setCartList([]);
+
     return(
         <CartContext.Provider value={{
             cartList,
-            addToCart
+            addToCart,
+            clearCart,
+            isCartEmpty
         }}>
             {children}
         </CartContext.Provider>
