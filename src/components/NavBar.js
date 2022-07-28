@@ -23,9 +23,9 @@ const NavBar = () => {
           </ul>
         </nav>
         <CartWidget emptyCart={!isCartEmpty()}/>
-        <a id="UserProfile" href="#signin">
+        <Link id="UserProfile" to="/signin">
             <img src={profile} alt="profile"/>
-        </a>
+        </Link>
       </header>
       );
   }
