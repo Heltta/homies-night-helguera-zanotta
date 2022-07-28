@@ -31,9 +31,14 @@ function ItemListContainer(props) {
         };
     };
     
+    // useEffect(()=>{
+    //     getBoardGames();
+    // },[]);
+
     useEffect(()=>{
+        console.log("itemListContainer render");
         getBoardGames();
-    },[]);
+    },[id])
 
     return(
         <div className="itemListContainer">

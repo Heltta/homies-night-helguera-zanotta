@@ -2,6 +2,7 @@ import logo from '../assets/images/logo.svg'
 import profile from '../assets/images/profile.svg'
 import CartWidget from './CartWidget.js'
 import '../css/NavBar.css'
+import {Link} from 'react-router-dom'
 
 const NavBar = () => {
     return (  
@@ -13,10 +14,10 @@ const NavBar = () => {
         </a>
         <nav>
           <ul>
-            <li><a href="/category/strategy">Estrategia</a></li>
-            <li><a href="/category/deception">Engaño</a></li>
-            <li><a href="/category/dexterity">Agilidad</a></li>
-            <li><a href="/category/casual">Casuales</a></li>
+            <li><Link to={`/category/strategy`}>Estrategia</Link></li>
+            <li><Link to={`/category/deception`}>Engaño</Link></li>
+            <li><Link to={`/category/dexterity`}>Agilidad</Link></li>
+            <li><Link to={`/category/casual`}>Casuales</Link></li>
           </ul>
         </nav>
         <CartWidget />
