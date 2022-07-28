@@ -8,10 +8,10 @@ const NavBar = () => {
     return (  
       <header>
         
-        <a id="homebtn" href="/">
+        <Link id="homebtn" to="/">
           <img src={logo} alt="logo" />
           <span>Homies Night</span>
-        </a>
+        </Link>
         <nav>
           <ul>
             <li><Link to={`/category/strategy`}>Estrategia</Link></li>
