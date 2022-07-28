@@ -8,7 +8,11 @@ function CartContextProvider({children}){
     const [cartList, setCartList] = useState([]);
 
     const addToCart = (objItem) =>{
-        setCartList([ objItem ])
+        if( !cartList.some( (listItem) => listItem.id === objItem.id)){
+            setCartList([ 
+                ...cartList,
+                objItem ])
+        }
     }
 
     return(
