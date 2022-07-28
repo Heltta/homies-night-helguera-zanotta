@@ -7,8 +7,12 @@ const useCartContext = () => useContext(CartContext);
 function CartContextProvider({children}){
     const [cartList, setCartList] = useState([]);
 
+    const isInCart = (id) => 
+        cartList.some( (listItem) => listItem.id === id );
+
+
     const addToCart = (objItem) =>{
-        if( !cartList.some( (listItem) => listItem.id === objItem.id)){
+        if( !isInCart( objItem.id) ){
             setCartList([ 
                 ...cartList,
                 objItem ])
