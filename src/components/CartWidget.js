@@ -1,6 +1,7 @@
 import cart from '../assets/images/cart.svg'
 import { Link } from 'react-router-dom'
 import { useCartContext } from "../context/CartContext";
+import '../css/CartWidget.css'
 
 
 function CartWidget({ emptyCart = false }){

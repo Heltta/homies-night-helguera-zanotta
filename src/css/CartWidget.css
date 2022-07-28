@@ -1,0 +1,21 @@
+#cartwidget{
+    grid-area: cart;
+    padding: 0 1rem;
+    text-decoration: none;
+}
+    #cartwidget img{
+        height: 3rem;
+        width: 3rem;
+    }
+    #cartwidget span{
+        color:#FFFFFF;
+        background-color: #E46A0D;
+        border-radius: 1rem;
+        padding: 0 0.25rem;
+    }
+        #cartwidget:visited span{
+            color:#FFFFFF;
+        }
+        #cartwidget:active span{
+            color:#082C4E;
+        }

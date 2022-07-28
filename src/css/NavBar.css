@@ -61,11 +61,8 @@ header{
 #UserProfile{
     grid-area: user;
 }
-    #homebtn img,#UserProfile img, #cartwidget img{
+    #homebtn img,#UserProfile img{
         height: 3rem;
         width: 3rem;
         padding: 0 1rem;
     }
-#cartwidget{
-    grid-area: cart;
-}
