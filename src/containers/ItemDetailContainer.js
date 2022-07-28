@@ -10,7 +10,7 @@ const getItem = (setState) =>{
                 .then((dataParse) => {
                     setState(dataParse);
             }),
-            2000
+            250
         )
 
     }catch(error){
