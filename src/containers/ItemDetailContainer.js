@@ -30,12 +30,6 @@ function ItemDetailContainer(){
     },
     [itemId])
 
-    // useEffect(
-    //     ()=>{
-    //         console.log(item);
-    //     },
-    //     [item]
-    // )
 
     return(
         <section className="itemDetailContainer">
