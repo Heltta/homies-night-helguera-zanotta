@@ -2,4 +2,12 @@ import { createContext } from "react";
 
 const CartContext = createContext([]);
 
-export default CartContext
+function CartContextProvider({children}){
+    return(
+        <CartContext.Provider value={{}}>
+            {children}
+        </CartContext.Provider>
+    )
+}
+
+export default CartContextProvider
