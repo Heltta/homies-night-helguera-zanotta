@@ -23,12 +23,23 @@ function CartContextProvider({children}){
 
     const clearCart = () => setCartList([]);
 
+    const removeItem = (id) =>{
+        if(isInCart(id)){
+            setCartList(
+                cartList.filter(
+                    (listItem) => listItem.id !== id
+                )
+            )
+        }
+    }
+
     return(
         <CartContext.Provider value={{
             cartList,
             addToCart,
             clearCart,
-            isCartEmpty
+            isCartEmpty,
+            removeItem,
         }}>
             {children}
         </CartContext.Provider>
