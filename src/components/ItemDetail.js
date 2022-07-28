@@ -2,12 +2,16 @@ import React, { useState } from "react"
 import '../css/itemDetail.css'
 import ItemCount from "../containers/ItemCount"
 import { Link } from "react-router-dom"
+import {useCartContext} from "../context/CartContext"
 
 function ItemDetail({item}){
     const [quantity, setQuantity] = useState(0);
 
+    const { addToCart } = useCartContext();
+
     const storeQuantity = (amount) =>{
         setQuantity(amount);
+        addToCart(item);
         console.log(`Se agregaron '${item?.name}' X${amount} al carrito`);
     }
 
