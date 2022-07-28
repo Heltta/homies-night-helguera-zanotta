@@ -2,9 +2,11 @@ import React, {useEffect, useState} from "react"
 import '../css/ItemListContainer.css'
 import ItemList from './ItemList.js'
 import {useParams} from "react-router-dom"
+import { collection ,doc, getDoc, getFirestore} from 'firebase/firestore'
 
 function ItemListContainer(props) {
     const [boardGames, setBoardGames] = useState([]);
+    const [boardGame, setBoardGame] = useState([]);
     const { id } = useParams();
 
     async function getBoardGames(){
@@ -32,7 +34,12 @@ function ItemListContainer(props) {
     };
     
     useEffect(()=>{
-        getBoardGames();
+        //getBoardGames();
+        const db = getFirestore();
+        const queryProduct = doc(db, 'items', '6jcpup3VRhNlVKPMQ8if');
+        getDoc(queryProduct)
+            .then(resp => setBoardGame( { id: resp.id, ...resp.data() } ))
+            .catch(error => console.log(error))
     },[]);
 
     return(
