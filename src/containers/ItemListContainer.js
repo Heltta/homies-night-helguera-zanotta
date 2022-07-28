@@ -21,7 +21,7 @@ function ItemListContainer(props) {
                         setBoardGames(dataParse);
                     }
                 }),
-                2000
+                250
             )
             // const dataParse = await resp.json();
             // setBoardGames(dataParse);
