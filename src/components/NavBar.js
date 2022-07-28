@@ -3,8 +3,10 @@ import profile from '../assets/images/profile.svg'
 import CartWidget from './CartWidget.js'
 import '../css/NavBar.css'
 import {Link} from 'react-router-dom'
+import { useCartContext } from "../context/CartContext";
 
 const NavBar = () => {
+  const { isCartEmpty } = useCartContext();
     return (  
       <header>
         
@@ -20,7 +22,7 @@ const NavBar = () => {
             <li><Link to={`/category/casual`}>Casuales</Link></li>
           </ul>
         </nav>
-        <CartWidget />
+        <CartWidget emptyCart={!isCartEmpty()}/>
         <a id="UserProfile" href="#signin">
             <img src={profile} alt="profile"/>
         </a>
