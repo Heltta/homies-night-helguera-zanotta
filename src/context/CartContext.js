@@ -17,12 +17,22 @@ function CartContextProvider({children}){
         //Amount of different items inside cart
         cartList.length
 
-    const addToCart = (objItem) =>{
+    const addToCart = (objItem, amount) =>{
         if( !isInCart( objItem.id) ){
             setCartList([ 
                 ...cartList,
-                objItem ])
+                { ...objItem, quantity: (amount)} ])
+        }else{
+            setCartList(
+                cartList.map(
+                    (listItem) => (listItem.id === objItem.id)? 
+                        //Overwrite quantity property to new value
+                        { ...listItem, quantity: (listItem.quantity+amount)}
+                        :
+                        listItem
+                ))
         }
+
     }
 
     const clearCart = () => setCartList([]);
