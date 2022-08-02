@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useCartContext } from "../context/CartContext";
 import '../css/CartContainer.css'
 
@@ -14,7 +13,7 @@ function CartContainer(){
                         <li key={prod.id}>
                             <h2 className="itemName">{prod.name}</h2>
                             <img src={prod.photo} alt="gamebox"/>
-                            <span className="itemPrice"> Precio: ${prod.quantity}</span>
+                            <span className="itemPrice"> Costo: ${prod.price*prod.quantity}</span>
                             <div className="cartItemUtility">
                                 <span className="itemQuantity"> Cantidad: {prod.quantity}</span>
                                 <button className="removeItem" onClick={()=> removeItem(prod.id)}>
