@@ -26,6 +26,10 @@ function CartContextProvider({children}){
             const tempList = [...cartList];
             const itemIndex = tempList.findIndex((item)=>item.id === objItem.id);
             tempList[itemIndex].quantity += amount;
+            //Check and fix if item quantity in cart
+            //is greater than stock
+            (tempList[itemIndex].quantity > tempList[itemIndex].stock) 
+                && (tempList[itemIndex].quantity = tempList[itemIndex].stock);
             setCartList(
                 tempList
             );
