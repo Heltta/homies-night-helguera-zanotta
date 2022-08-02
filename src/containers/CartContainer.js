@@ -1,11 +1,12 @@
 import { useCartContext } from "../context/CartContext";
 import '../css/CartContainer.css'
+
 import Cart from '../components/Cart'
+import ClearCartBtn from "../components/ClearCartBtn";
 
 function CartContainer(){
-    
+
     const {
-        clearCart,
         isCartEmpty,
     } = useCartContext();
 
@@ -14,7 +15,7 @@ function CartContainer(){
     return(
             <section className="cartList">
                 <Cart />
-                <button onClick={clearCart}>Limpiar carrito</button>
+                <ClearCartBtn />
             </section>
         );
 }
