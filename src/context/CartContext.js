@@ -13,9 +13,12 @@ function CartContextProvider({children}){
     const isCartEmpty = () => 
         cartList.length === 0;
 
-    const cartSize = () =>
-        //Amount of different items inside cart
-        cartList.length
+    const cartSize = () =>{
+        //Returns total Amount of items inside cart
+        let totalAmount = 0;
+        cartList.forEach(item => totalAmount += item.quantity);
+        return totalAmount
+    }
 
     const addToCart = (objItem, amount) =>{
         if( !isInCart( objItem.id) ){
