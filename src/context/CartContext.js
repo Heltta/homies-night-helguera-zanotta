@@ -23,7 +23,7 @@ function CartContextProvider({children}){
     const cartCost = () =>{
         //Returns total Amount of items inside cart
         let totalCost = 0;
-        cartList.forEach(item => totalCost += item.price);
+        cartList.forEach(item => totalCost += item.price*item.quantity);
         return totalCost
 
     }
