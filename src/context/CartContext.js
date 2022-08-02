@@ -20,6 +20,14 @@ function CartContextProvider({children}){
         return totalAmount
     }
 
+    const cartCost = () =>{
+        //Returns total Amount of items inside cart
+        let totalCost = 0;
+        cartList.forEach(item => totalCost += item.price);
+        return totalCost
+
+    }
+
     const addToCart = (objItem, amount) =>{
         if( !isInCart( objItem.id) ){
             setCartList([ 
@@ -60,6 +68,7 @@ function CartContextProvider({children}){
             isCartEmpty,
             removeItem,
             cartSize,
+            cartCost,
         }}>
             {children}
         </CartContext.Provider>

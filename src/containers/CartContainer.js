@@ -4,6 +4,7 @@ import '../css/CartContainer.css'
 import Cart from '../components/Cart'
 import ClearCartBtn from "../components/ClearCartBtn";
 import VoidCart from "../components/VoidCart";
+import CartSubtotal from "../components/CartSubtotal";
 
 function CartContainer(){
 
@@ -21,7 +22,7 @@ function CartContainer(){
     return(
             <section className="cartList">
                 <Cart />
-                <ClearCartBtn />
+                <CartSubtotal children={<ClearCartBtn />}/>
             </section>
         );
 }
