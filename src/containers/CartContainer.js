@@ -11,8 +11,11 @@ function CartContainer(){
         isCartEmpty,
     } = useCartContext();
 
-    if(isCartEmpty()){return(
-        <VoidCart />
+    if(isCartEmpty()){
+        return(
+            <section className="cartList">
+                <VoidCart />
+            </section>
     )};
 
     return(
