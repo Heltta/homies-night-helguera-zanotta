@@ -29,14 +29,6 @@ function CartContextProvider({children}){
             setCartList(
                 tempList
             );
-            // setCartList(
-            //     cartList.map(
-            //         (listItem) => (listItem.id === objItem.id)? 
-            //             //Overwrite quantity property to new value
-            //             { ...listItem, quantity: (listItem.quantity+amount)}
-            //             :
-            //             listItem
-            //     ))
         }
 
     }
