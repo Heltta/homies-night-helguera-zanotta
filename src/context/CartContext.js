@@ -23,14 +23,20 @@ function CartContextProvider({children}){
                 ...cartList,
                 { ...objItem, quantity: (amount)} ])
         }else{
+            const tempList = [...cartList];
+            const itemIndex = tempList.findIndex((item)=>item.id === objItem.id);
+            tempList[itemIndex].quantity += amount;
             setCartList(
-                cartList.map(
-                    (listItem) => (listItem.id === objItem.id)? 
-                        //Overwrite quantity property to new value
-                        { ...listItem, quantity: (listItem.quantity+amount)}
-                        :
-                        listItem
-                ))
+                tempList
+            );
+            // setCartList(
+            //     cartList.map(
+            //         (listItem) => (listItem.id === objItem.id)? 
+            //             //Overwrite quantity property to new value
+            //             { ...listItem, quantity: (listItem.quantity+amount)}
+            //             :
+            //             listItem
+            //     ))
         }
 
     }
