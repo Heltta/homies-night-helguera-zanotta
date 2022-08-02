@@ -3,6 +3,7 @@ import '../css/CartContainer.css'
 
 import Cart from '../components/Cart'
 import ClearCartBtn from "../components/ClearCartBtn";
+import VoidCart from "../components/VoidCart";
 
 function CartContainer(){
 
@@ -10,7 +11,9 @@ function CartContainer(){
         isCartEmpty,
     } = useCartContext();
 
-    if(isCartEmpty()){return(<h2>Su carrito se encuentra vacío</h2>)};
+    if(isCartEmpty()){return(
+        <VoidCart />
+    )};
 
     return(
             <section className="cartList">
