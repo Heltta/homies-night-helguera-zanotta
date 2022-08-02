@@ -21,7 +21,7 @@ function ItemDetail({item}){
                 <div>{item?.name}</div>
                 <div>{item?.price} dolares</div>
                 <div>{item?.description}</div>
-                {(quantity==0)?
+                {(quantity===0)?
                                 (<ItemCount  stock={item?.stock} 
                                             initial={1}
                                             onAdd={storeQuantity}/>)
