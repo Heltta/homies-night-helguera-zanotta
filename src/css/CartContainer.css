@@ -90,3 +90,18 @@
             font-size: 2rem;
             margin-inline-start: 1rem;
         }
+    .cartList .subTotal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 1rem;
+        border: solid 4px;
+        border-radius: 1rem;
+        margin: 1rem 0;
+
+        background-color: #082C4E;
+        border-color: #643206;
+        color: #FFFFFF;
+
+    }
