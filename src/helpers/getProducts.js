@@ -1,4 +1,4 @@
-import { doc, getDoc, getFirestore} from 'firebase/firestore'
+import {collection, doc, getDoc, getDocs, getFirestore} from 'firebase/firestore'
 
 // const queryProduct = doc(db, 'items', '6jcpup3VRhNlVKPMQ8if');
 // getDoc(queryProduct)
@@ -13,6 +13,17 @@ const getItem = (setState) =>{
     const queryProduct = doc(db, 'items', id);
     getDoc(queryProduct)
         .then(resp => setState ( { id: resp.id, ...resp.data() } ))
+        .catch(error => console.log(error));
+    return
+}
+
+const getCollection = (setState) =>{
+    //Fetches a single firebase doc from
+    //the item collection
+    const db = getFirestore();
+    const itemColl = collection(db, 'items');
+    getDocs(itemColl)
+        .then(resp => setState ( resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })) ))
         .catch(error => console.log(error));
     return
 }
@@ -37,4 +48,5 @@ export default getProducts
 export {
     getItem,
     getProducts,
+    getCollection,
 }

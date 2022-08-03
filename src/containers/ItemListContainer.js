@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from "react"
 import '../css/ItemListContainer.css'
 import ItemList from './ItemList.js'
-import getProducts from "../helpers/getProducts";
+import {getProducts, getCollection} from "../helpers/getProducts";
 import {useParams} from "react-router-dom"
 
 function ItemListContainer(props) {
     const [boardGames, setBoardGames] = useState([]);
+    const [bGamesTest, setBGamesTest] = useState([]);
     const { id } = useParams();
 
     useEffect(()=>{
         // console.log("itemListContainer render");
+        getCollection((fbData)=> setBGamesTest(fbData));
         getProducts((parsedData) => {
             //Filter items by category (if any)
             if(id!==undefined){
