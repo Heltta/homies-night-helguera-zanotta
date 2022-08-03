@@ -3,15 +3,13 @@ import '../css/ItemListContainer.css'
 import ItemList from './ItemList.js'
 import getProducts from "../helpers/getProducts";
 import {useParams} from "react-router-dom"
-import { collection ,doc, getDoc, getFirestore} from 'firebase/firestore'
 
 function ItemListContainer(props) {
     const [boardGames, setBoardGames] = useState([]);
-    const [boardGame, setBoardGame] = useState([]);
     const { id } = useParams();
 
     useEffect(()=>{
-        console.log("itemListContainer render");
+        // console.log("itemListContainer render");
         getProducts((parsedData) => {
             //Filter items by category (if any)
             if(id!==undefined){
