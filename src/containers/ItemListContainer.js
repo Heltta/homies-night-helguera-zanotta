@@ -6,7 +6,6 @@ import {useParams} from "react-router-dom"
 
 function ItemListContainer(props) {
     const [boardGames, setBoardGames] = useState([]);
-    const [bGamesTest, setBGamesTest] = useState([]);
     const { id } = useParams();
 
     useEffect(()=>{
