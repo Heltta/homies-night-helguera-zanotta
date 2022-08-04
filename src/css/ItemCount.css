@@ -1,0 +1,22 @@
+
+    .itemCount button{
+                
+        padding: 2.5px 5.5px;
+        border-radius: 5px;
+        border: 0;
+        margin: 1px;
+
+        font-style: normal;
+        font-size: inherit;
+        line-height: inherit;
+
+        color: #FFFFFF;
+        background-color: #E46A0D;
+    }
+        .itemCount button:hover{
+            color: #082C4E;
+        }
+    .itemCount span{
+        margin: 0 0.5rem;
+    }
+

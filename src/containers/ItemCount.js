@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import "../css/ItemCount.css"
 
 function ItemCount({ stock, initial, onAdd }){
     const [count, setCount] = useState(initial);
@@ -14,7 +15,7 @@ function ItemCount({ stock, initial, onAdd }){
         }
     }
     return (
-        <div>
+        <div className="itemCount">
             <button onClick={()=> restar()}>-</button>
             <span>{count}</span>
             <button onClick={()=> sumar()}>+</button>
