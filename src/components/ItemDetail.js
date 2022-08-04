@@ -12,7 +12,6 @@ function ItemDetail({item}){
     const storeQuantity = (amount) =>{
         setQuantity(amount);
         addToCart(item, amount);
-        console.log(`Se agregaron '${item?.name}' X${amount} al carrito`);
     }
 
     return(
