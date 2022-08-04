@@ -11,7 +11,7 @@ function ItemListContainer(props) {
 
     useEffect(()=>{
         // console.log("itemListContainer render");
-        getCollection((fbData)=> setBGamesTest(fbData));
+        getCollection((fbData)=> setBGamesTest(fbData), id);
         getProducts((parsedData) => {
             //Filter items by category (if any)
             if(id!==undefined){
