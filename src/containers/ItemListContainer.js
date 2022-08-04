@@ -11,16 +11,16 @@ function ItemListContainer(props) {
 
     useEffect(()=>{
         // console.log("itemListContainer render");
-        getCollection((fbData)=> setBGamesTest(fbData), id);
-        getProducts((parsedData) => {
-            //Filter items by category (if any)
-            if(id!==undefined){
-                const filteredGames = parsedData.filter(juego=>juego.category===id);
-                setBoardGames(filteredGames);
-            }else{
-                setBoardGames(parsedData);
-            }
-        });
+        getCollection((fbData)=> setBoardGames(fbData), id);
+        // getProducts((parsedData) => {
+        //     //Filter items by category (if any)
+        //     if(id!==undefined){
+        //         const filteredGames = parsedData.filter(juego=>juego.category===id);
+        //         setBoardGames(filteredGames);
+        //     }else{
+        //         setBoardGames(parsedData);
+        //     }
+        // });
     },[id])
 
     return(

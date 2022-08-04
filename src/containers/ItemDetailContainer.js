@@ -9,11 +9,11 @@ function ItemDetailContainer(){
     const { itemId } = useParams();
 
     useEffect(()=>{
-        getItem((fbData)=> setItemTest(fbData));
-        getProducts((parsedData)=>{
-            const filteredItem = parsedData.find(boardGame => boardGame.id === itemId);
-            setItem(filteredItem);
-        });
+        getItem((fbData)=> setItem(fbData));
+        // getProducts((parsedData)=>{
+        //     const filteredItem = parsedData.find(boardGame => boardGame.id === itemId);
+        //     setItem(filteredItem);
+        // });
     },
     [itemId])
 
