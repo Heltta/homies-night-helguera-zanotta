@@ -19,10 +19,27 @@
 
             border-color: #643206;
         }
-        .itemListContainer section .productList a button{
+        .itemListContainer section .productList a{
             display: block;
-            width: 100%;
+            margin: 0.5rem 0 0 0;
         }
+        .itemListContainer section .productList a button{
+            width: 100%;
+            
+            padding: 2.5px 5.5px;
+            border-radius: 5px;
+            border: 0px;
+
+            font-style: normal;
+            font-size: inherit;
+            line-height: inherit;
+
+            color: #FFFFFF;
+            background-color: #E46A0D;
+        }
+            .itemListContainer section .productList a button:hover{
+                color: #082C4E;
+            }
 .producto div span{
     padding: 1rem;
 }
