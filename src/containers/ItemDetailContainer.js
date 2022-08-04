@@ -9,7 +9,7 @@ function ItemDetailContainer(){
     const { itemId } = useParams();
 
     useEffect(()=>{
-        getItem((fbData)=> setItem(fbData));
+        getItem((fbData)=> setItem(fbData), itemId);
         // getProducts((parsedData)=>{
         //     const filteredItem = parsedData.find(boardGame => boardGame.id === itemId);
         //     setItem(filteredItem);
