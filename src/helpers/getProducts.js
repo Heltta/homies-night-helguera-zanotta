@@ -1,8 +1,8 @@
 import {collection, doc, getDoc, getDocs, getFirestore, query, where} from 'firebase/firestore'
 
 const getItem = (setState, id) =>{
-    //Fetches a single firebase doc from
-    //the item collection
+    //Fetches a single doc from the item collection
+    //stored at firebase Cloud Firestore
     const db = getFirestore();
     const queryProduct = doc(db, 'items', id);
     getDoc(queryProduct)
@@ -12,8 +12,8 @@ const getItem = (setState, id) =>{
 }
 
 const getCollection = (setState, category) =>{
-    //Fetches a single firebase doc from
-    //the item collection
+    //Fetches (and filter if necessary) a collection
+    //stored at firebase Cloud Firestore
     const db = getFirestore();
     if(category===undefined){
         const itemColl = collection(db, 'items');
@@ -29,25 +29,7 @@ const getCollection = (setState, category) =>{
     return
 }
 
-const getProducts = (setState) =>{
-    try{
-        setTimeout(
-            ()=>fetch('/resources/tabletopGames.json')
-                .then((resp)=> resp.json())
-                .then((dataParse) => {
-                    setState(dataParse);
-            }),
-            250
-        )
-
-    }catch(error){
-        console.log(error);
-    };
-}
-
-export default getProducts
 export {
     getItem,
-    getProducts,
     getCollection,
 }

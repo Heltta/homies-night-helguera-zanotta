@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import '../css/ItemListContainer.css'
 import ItemList from './ItemList.js'
-import {getProducts, getCollection} from "../helpers/getProducts";
+import { getCollection } from "../helpers/getProducts";
 import {useParams} from "react-router-dom"
 
 function ItemListContainer(props) {
@@ -10,17 +10,7 @@ function ItemListContainer(props) {
     const { id } = useParams();
 
     useEffect(()=>{
-        // console.log("itemListContainer render");
         getCollection((fbData)=> setBoardGames(fbData), id);
-        // getProducts((parsedData) => {
-        //     //Filter items by category (if any)
-        //     if(id!==undefined){
-        //         const filteredGames = parsedData.filter(juego=>juego.category===id);
-        //         setBoardGames(filteredGames);
-        //     }else{
-        //         setBoardGames(parsedData);
-        //     }
-        // });
     },[id])
 
     return(

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../components/ItemDetail";
-import {getProducts, getItem} from "../helpers/getProducts";
+import { getItem } from "../helpers/getProducts";
 import {useParams} from "react-router-dom"
 
 function ItemDetailContainer(){
@@ -10,10 +10,6 @@ function ItemDetailContainer(){
 
     useEffect(()=>{
         getItem((fbData)=> setItem(fbData), itemId);
-        // getProducts((parsedData)=>{
-        //     const filteredItem = parsedData.find(boardGame => boardGame.id === itemId);
-        //     setItem(filteredItem);
-        // });
     },
     [itemId])
 
