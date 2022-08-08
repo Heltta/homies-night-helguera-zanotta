@@ -1,4 +1,5 @@
 import { useCartContext } from "../context/CartContext";
+import CartMakeOrder from "./CartMakeOrder";
 
 function CartSubtotal({children}){
     const {
@@ -10,6 +11,7 @@ function CartSubtotal({children}){
         <div className="subTotal">
             {children}
             <span>{`Subtotal (items ${cartSize()}): $${cartCost()}`}</span>
+            <CartMakeOrder />
         </div>
     )
 }
