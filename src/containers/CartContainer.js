@@ -5,6 +5,7 @@ import Cart from '../components/Cart'
 import ClearCartBtn from "../components/ClearCartBtn";
 import VoidCart from "../components/VoidCart";
 import CartSubtotal from "../components/CartSubtotal";
+import OrderForm from "../components/OrderForm";
 
 function CartContainer(){
 
@@ -16,6 +17,7 @@ function CartContainer(){
         return(
             <section className="cartList">
                 <VoidCart />
+                <OrderForm />
             </section>
     )};
 
@@ -23,6 +25,7 @@ function CartContainer(){
             <section className="cartList">
                 <Cart />
                 <CartSubtotal children={<ClearCartBtn />}/>
+                <OrderForm />
             </section>
         );
 }
