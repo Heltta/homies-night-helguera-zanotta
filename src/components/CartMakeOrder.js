@@ -1,4 +1,5 @@
 import { useCartContext } from "../context/CartContext";
+import sendOrder from "../helpers/sendOrder";
 
 function CartMakeOrder(){
     
@@ -19,6 +20,7 @@ function CartMakeOrder(){
         });
         const order = {buyer, items, total:cartCost()};
         console.log(order);
+        sendOrder(order);
         return
     }
     return(
