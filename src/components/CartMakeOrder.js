@@ -1,4 +1,5 @@
 import { useCartContext } from "../context/CartContext";
+import { useOrderContext } from "../context/OrderContext";
 import sendOrder from "../helpers/sendOrder";
 
 function CartMakeOrder(){
@@ -8,13 +9,17 @@ function CartMakeOrder(){
         cartCost,
     } = useCartContext();
 
+    const {
+        buyer,
+    } = useOrderContext();
+
     const buildOrderList = () =>{
 
-        const buyer = {
-            name:"Generic User",
-            phone:"+012345678",
-            email:"place_holder@mail.com",
-        }
+        // const buyer = {
+        //     name:"Generic User",
+        //     phone:"+012345678",
+        //     email:"place_holder@mail.com",
+        // }
 
         const items = [];
         cartList.forEach(item => {

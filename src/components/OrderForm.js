@@ -2,6 +2,7 @@ import {
     useState,
 } from "react";
 import Swal from "sweetalert2";
+import { useOrderContext } from "../context/OrderContext";
 
 function OrderForm(){
     const [email, setEmail] = useState('');
@@ -9,17 +10,23 @@ function OrderForm(){
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
 
+    
+    const {
+        buyer,
+        saveBuyer,
+    } = useOrderContext();
+    
     const validMail = () => {
         return (emailCheck === email)
     }
 
     const handleSubmit = (event) => {
         if(validMail()){
-            const buyer = {
+            saveBuyer({
                 name:name,
                 phone:phone,
                 email:email,
-            }
+            });
             Swal.fire({
                 toast: true,
                 title: 'Datos ingresados',

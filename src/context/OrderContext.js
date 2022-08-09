@@ -5,18 +5,26 @@ const OrderContext = createContext([]);
 const useOrderContext = () => useContext(OrderContext);
 
 function OrderContextProvider({children}){
-    const [buyer, setBuyer] = useState([]);
+    const [buyer, setBuyer] = useState({});
     const [buyerItems, setBuyerItems] = useState([]);
-    const [cartList, setCartList] = useState([]);
+    const [order, setOrder] = useState({});
+
+    const saveBuyer = ({name,phone,email}) =>{
+        setBuyer({
+            name:name,
+            phone:phone,
+            email:email,
+        });
+    }
 
     return(
         <OrderContext.Provider value={{
             buyer,
             buyerItems,
-            cartList,
-            setBuyer,
+            order,
+            saveBuyer,
             setBuyerItems,
-            setCartList,
+            setOrder,
         }}>
             {children}
         </OrderContext.Provider>
