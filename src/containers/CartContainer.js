@@ -8,6 +8,7 @@ import VoidCart from "../components/VoidCart";
 import CartSubtotal from "../components/CartSubtotal";
 import OrderForm from "../components/OrderForm";
 import CartMakeOrder from "../components/CartMakeOrder";
+import FinishOrderBtn from "../components/FinishOrderBtn";
 
 function CartContainer(){
 
@@ -17,6 +18,7 @@ function CartContainer(){
 
     const {
         isBuyerItemsEmpty,
+        isBuyerEmpty,
     } = useOrderContext();
 
     if(isCartEmpty()){
@@ -32,6 +34,7 @@ function CartContainer(){
                 <CartSubtotal children={<ClearCartBtn />}/>
                 <CartMakeOrder />
                 {!isBuyerItemsEmpty() && <OrderForm />}
+                {!isBuyerEmpty() && <FinishOrderBtn />}
             </section>
         );
 }

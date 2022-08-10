@@ -4,12 +4,10 @@ function CartMakeOrder(){
 
     const {
         saveBoughtItems,
-        buildOrder,
     } = useOrderContext();
 
     const buildOrderList = () =>{
         saveBoughtItems();
-        buildOrder();
         return
     }
 

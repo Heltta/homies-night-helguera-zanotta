@@ -10,15 +10,11 @@ function OrderForm(){
     const [emailCheck, setEmailCheck] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
-    
+
     const {
-        buyer,
         saveBuyer,
     } = useOrderContext();
 
-    useEffect(()=>{
-        console.log(buyer);
-    },[buyer])
     
     const validMail = () => {
         return (emailCheck === email)

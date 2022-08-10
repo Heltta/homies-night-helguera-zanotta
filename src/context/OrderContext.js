@@ -22,6 +22,9 @@ function OrderContextProvider({children}){
             email:email,
         });
     }
+    const isBuyerEmpty = () =>{
+        return (buyer === null);
+    }
 
     const saveBoughtItems = () =>{
         const items = [];
@@ -64,6 +67,7 @@ function OrderContextProvider({children}){
             isOrderEmpty,
             resetOrder,
             isBuyerItemsEmpty,
+            isBuyerEmpty,
         }}>
             {children}
         </OrderContext.Provider>
