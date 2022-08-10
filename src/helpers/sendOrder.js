@@ -9,13 +9,10 @@ const sendOrder = (order) =>{
         console.log(order);
         console.log(resp);
         Swal.fire({
-            toast: true,
             title: 'Orden generada',
             icon: 'success',
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 4000,
-            timerProgressBar: true,
+            text: `Su id es ${resp.id}`,
+            showConfirmButton: true,
             });
     });
 }
