@@ -1,4 +1,5 @@
 import { useCartContext } from "../context/CartContext";
+import { useOrderContext } from "../context/OrderContext";
 
 function ClearCartBtn(){
     
@@ -6,8 +7,16 @@ function ClearCartBtn(){
         clearCart,
     } = useCartContext();
 
+    const {
+        resetOrder,
+    } = useOrderContext();
+
+    const cleanHandler = () =>{
+        clearCart();
+        resetOrder();
+    }
     return(
-        <button onClick={clearCart}>Limpiar carrito</button>
+        <button onClick={cleanHandler}>Limpiar carrito</button>
     )
 }
 

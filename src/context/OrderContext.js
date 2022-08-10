@@ -6,7 +6,7 @@ const OrderContext = createContext([]);
 const useOrderContext = () => useContext(OrderContext);
 
 function OrderContextProvider({children}){
-    const [buyer, setBuyer] = useState({});
+    const [buyer, setBuyer] = useState(null);
     const [buyerItems, setBuyerItems] = useState([]);
     const [order, setOrder] = useState(null);
 
@@ -45,6 +45,8 @@ function OrderContextProvider({children}){
         return (order === null);
     }
     const resetOrder = () =>{
+        setBuyer(null);
+        setBuyerItems([]);
         setOrder(null);
     }
 
