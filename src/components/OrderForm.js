@@ -1,5 +1,4 @@
 import { 
-    useEffect,
     useState,
 } from "react";
 import Swal from "sweetalert2";
@@ -29,7 +28,7 @@ function OrderForm(){
             });
             Swal.fire({
                 toast: true,
-                title: 'Datos ingresados',
+                title: 'Datos del usuario ingresados',
                 icon: 'success',
                 position: 'top-end',
                 showConfirmButton: false,

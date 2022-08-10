@@ -1,4 +1,5 @@
 import { useOrderContext } from "../context/OrderContext";
+import sendOrder from "../helpers/sendOrder"
 
 function FinishOrderBtn(){
     const {
@@ -6,6 +7,8 @@ function FinishOrderBtn(){
         buyer,
         buyerItems,
         order,
+        buildOrder,
+        resetOrder,
     } = useOrderContext();
 
     const finishHandler = () =>{
@@ -13,6 +16,8 @@ function FinishOrderBtn(){
         console.log(buyer);
         console.log(buyerItems);
         console.log(order);
+        sendOrder(buildOrder());
+        resetOrder();
     }
 
     if(isOrderEmpty()){

@@ -45,7 +45,7 @@ function OrderContextProvider({children}){
     const buildOrder = () =>{
         setOrder({buyer, items: buyerItems, total:cartCost()});
         //sendOrder(order);
-        return
+        return ({buyer, items: buyerItems, total:cartCost()})
     }
     const isOrderEmpty = () =>{
         return (order === null);
