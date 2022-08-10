@@ -1,4 +1,5 @@
 import { useOrderContext } from "../context/OrderContext";
+import { useCartContext } from "../context/CartContext";
 import sendOrder from "../helpers/sendOrder"
 
 function FinishOrderBtn(){
@@ -10,6 +11,10 @@ function FinishOrderBtn(){
         buildOrder,
         resetOrder,
     } = useOrderContext();
+    const {
+        clearCart,
+    } = useCartContext();
+    
 
     const finishHandler = () =>{
         console.log('finishHandler');
@@ -18,6 +23,7 @@ function FinishOrderBtn(){
         console.log(order);
         sendOrder(buildOrder());
         resetOrder();
+        clearCart();
     }
 
     if(isOrderEmpty()){
