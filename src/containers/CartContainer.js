@@ -16,7 +16,7 @@ function CartContainer(){
     } = useCartContext();
 
     const {
-        isOrderEmpty,
+        isBuyerItemsEmpty,
     } = useOrderContext();
 
     if(isCartEmpty()){
@@ -31,7 +31,7 @@ function CartContainer(){
                 <Cart />
                 <CartSubtotal children={<ClearCartBtn />}/>
                 <CartMakeOrder />
-                {!isOrderEmpty() && <OrderForm />}
+                {!isBuyerItemsEmpty() && <OrderForm />}
             </section>
         );
 }

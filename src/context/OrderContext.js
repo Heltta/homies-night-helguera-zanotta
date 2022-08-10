@@ -35,6 +35,9 @@ function OrderContextProvider({children}){
         });
         setBuyerItems(items);
     }
+    const isBuyerItemsEmpty = ()=>{
+        return (buyerItems.length === 0);
+    }
 
     const buildOrder = () =>{
         setOrder({buyer, items: buyerItems, total:cartCost()});
@@ -60,6 +63,7 @@ function OrderContextProvider({children}){
             buildOrder,
             isOrderEmpty,
             resetOrder,
+            isBuyerItemsEmpty,
         }}>
             {children}
         </OrderContext.Provider>
