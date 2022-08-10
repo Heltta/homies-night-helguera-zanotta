@@ -1,4 +1,5 @@
 import { useCartContext } from "../context/CartContext";
+import { useOrderContext } from "../context/OrderContext";
 import '../css/CartContainer.css'
 
 import Cart from '../components/Cart'
@@ -6,6 +7,7 @@ import ClearCartBtn from "../components/ClearCartBtn";
 import VoidCart from "../components/VoidCart";
 import CartSubtotal from "../components/CartSubtotal";
 import OrderForm from "../components/OrderForm";
+import CartMakeOrder from "../components/CartMakeOrder";
 
 function CartContainer(){
 
@@ -13,11 +15,14 @@ function CartContainer(){
         isCartEmpty,
     } = useCartContext();
 
+    const {
+        isOrderEmpty,
+    } = useOrderContext();
+
     if(isCartEmpty()){
         return(
             <section className="cartList">
                 <VoidCart />
-                <OrderForm />
             </section>
     )};
 
@@ -25,7 +30,8 @@ function CartContainer(){
             <section className="cartList">
                 <Cart />
                 <CartSubtotal children={<ClearCartBtn />}/>
-                <OrderForm />
+                <CartMakeOrder />
+                {!isOrderEmpty() && <OrderForm />}
             </section>
         );
 }

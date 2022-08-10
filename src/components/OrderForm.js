@@ -1,4 +1,5 @@
 import { 
+    useEffect,
     useState,
 } from "react";
 import Swal from "sweetalert2";
@@ -9,12 +10,15 @@ function OrderForm(){
     const [emailCheck, setEmailCheck] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
-
     
     const {
         buyer,
         saveBuyer,
     } = useOrderContext();
+
+    useEffect(()=>{
+        console.log(buyer);
+    },[buyer])
     
     const validMail = () => {
         return (emailCheck === email)
@@ -36,7 +40,6 @@ function OrderForm(){
                 timer: 4000,
                 timerProgressBar: true,
               })
-            console.log(buyer);
         }else{
             Swal.fire({
                 title: 'Error',
