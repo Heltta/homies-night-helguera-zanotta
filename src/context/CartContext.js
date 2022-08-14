@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext([]);
 
@@ -10,8 +10,9 @@ function CartContextProvider({children}){
     const isInCart = (id) => 
         cartList.some( (listItem) => listItem.id === id );
 
-    const isCartEmpty = () => 
-        cartList.length === 0;
+    const isCartEmpty = useCallback(() => {
+        return (cartList.length === 0);
+    }, [cartList]);
 
     const cartSize = () =>{
         //Returns total Amount of items inside cart
@@ -59,6 +60,16 @@ function CartContextProvider({children}){
             )
         }
     }
+
+    useEffect(()=>{
+        //Save cartList to localStorage
+        if(!isCartEmpty()){
+            localStorage.setItem(
+                'cart',
+                JSON.stringify(cartList)
+            );
+        }
+    }, [cartList, isCartEmpty])
 
     return(
         <CartContext.Provider value={{
