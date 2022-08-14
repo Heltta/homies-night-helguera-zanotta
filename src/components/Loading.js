@@ -1,8 +1,10 @@
+import '../css/Loading.css'
+import 'animate.css'
 
 function Loading (){
     return(
-        <div>
-            ...Loading
+        <div className="Loading">
+            <span>...Loading</span>
         </div>
     )
 }
