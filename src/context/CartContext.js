@@ -5,6 +5,7 @@ const CartContext = createContext([]);
 const useCartContext = () => useContext(CartContext);
 
 function CartContextProvider({children}){
+    const cartLocalKey = 'cart'
     const [cartList, setCartList] = useState([]);
 
     const isInCart = (id) => 
@@ -49,10 +50,15 @@ function CartContextProvider({children}){
 
     }
 
-    const clearCart = () => setCartList([]);
+    const clearCart = () => {
+        setCartList([])
+        localStorage.removeItem(cartLocalKey)
+    };
 
     const removeItem = (id) =>{
         if(isInCart(id)){
+            //Remove cart from localStorage if removeItem will remove the last item
+            (cartList.length === 1) && (localStorage.removeItem(cartLocalKey))
             setCartList(
                 cartList.filter(
                     (listItem) => listItem.id !== id
@@ -65,7 +71,7 @@ function CartContextProvider({children}){
         //Save cartList to localStorage
         if(!isCartEmpty()){
             localStorage.setItem(
-                'cart',
+                cartLocalKey,
                 JSON.stringify(cartList)
             );
         }
