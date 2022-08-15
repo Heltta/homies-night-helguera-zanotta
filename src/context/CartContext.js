@@ -75,6 +75,12 @@ function CartContextProvider({children}){
                 JSON.stringify(cartList)
             );
         }
+        else{
+            const cartJson = JSON.parse(
+                localStorage.getItem(cartLocalKey)
+            );
+            (cartJson !== null) && (setCartList(cartJson));
+        }
     }, [cartList, isCartEmpty])
 
     return(
