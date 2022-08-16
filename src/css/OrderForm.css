@@ -1,10 +1,27 @@
 form{
+    --form-width: 26rem;
+
+    position: fixed;
+    /*228px is equal to half of form total height*/
+    top: calc(50vh - 228px); 
+    left: calc(50vw - var(--form-width) /2);
+    z-index: 10;
+
     display: block;
+    width: var(--form-width);
+    height: fit-content;
     padding: 1rem;
-    border: 0;
+    border: 0.25rem solid;
     border-radius: 1rem;
-    margin: 1rem 0;
+    margin:0;
+
+    border-color: #E46A0D;
     background-color: #082c4e;
+
+    
+    animation: bounce; 
+    animation-duration: 2s;
+    animation-iteration-count:1;
 }
     form label{
         display: block;
@@ -31,7 +48,7 @@ form{
         font-size: 16px;
         line-height: inherit;
 
-        background-color: #383E46;
+        background-color: #13110e;
         color: #FFFFFF;
 
         }
