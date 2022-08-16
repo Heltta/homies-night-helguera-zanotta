@@ -3,6 +3,7 @@ import {
 } from "react";
 import Swal from "sweetalert2";
 import { useOrderContext } from "../context/OrderContext";
+import '../css/OrderForm.css'
 
 function OrderForm(){
     const [email, setEmail] = useState('');
