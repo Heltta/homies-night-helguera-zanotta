@@ -60,6 +60,11 @@ header{
     }
 #UserProfile{
     grid-area: user;
+    
+    border: 0;
+    padding: 0;
+
+    background-color: transparent;
 }
     #homebtn img,#UserProfile img{
         height: 3rem;
