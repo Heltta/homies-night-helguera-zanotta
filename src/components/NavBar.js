@@ -1,6 +1,6 @@
 import logo from '../assets/images/logo.svg'
-import profile from '../assets/images/profile.svg'
 import CartWidget from './CartWidget.js'
+import AccountWidget from './AccountWidget'
 import '../css/NavBar.css'
 import {Link} from 'react-router-dom'
 import { useCartContext } from "../context/CartContext";
@@ -23,9 +23,7 @@ const NavBar = () => {
           </ul>
         </nav>
         <CartWidget emptyCart={!isCartEmpty()}/>
-        <Link id="UserProfile" to="/signin">
-            <img src={profile} alt="profile"/>
-        </Link>
+        <AccountWidget/>
       </header>
       );
   }
