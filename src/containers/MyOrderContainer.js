@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import MyOrderForm from "../components/MyOrderForm";
+import MyOrder from "../components/MyOrder";
 
 function MyOrderContainer(){
     const [order, setOrder] = useState();
@@ -14,6 +15,7 @@ function MyOrderContainer(){
     return( 
         <>
             <MyOrderForm setState={setOrder}/>
+            {order && (<MyOrder order={order}/>)}
         </>
     );
 }
