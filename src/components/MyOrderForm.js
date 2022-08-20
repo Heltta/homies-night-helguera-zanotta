@@ -26,6 +26,12 @@ function MyOrderForm({ setState }){
 
     return(
         <form
+            style={{
+                display: 'block',
+                zIndex: 0,
+                top:0,
+                position: 'relative'
+            }}
             onSubmit={handleSubmit}>
             <label>
                 Identificador de orden
