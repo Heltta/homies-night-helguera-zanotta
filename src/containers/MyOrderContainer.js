@@ -15,13 +15,23 @@ function MyOrderContainer(){
     return(
         <form onSubmit={
             (e)=>{
-                getOrder(
-                    (fbData)=> {
-                        setOrder(fbData);
-                    },
-                    orderId);
                 e.preventDefault();
-            }}>
+                if(orderId){
+                    getOrder(
+                        (fbData)=> {
+                            setOrder(fbData);
+                        },
+                        orderId);
+                }
+                else{
+                    (orderId === '' )? 
+                        console.log('You must write an id')
+                        :
+                        console.log(`${orderId} is not a valid id`)
+                        ;
+                }
+            }
+        }>
             <label>
                 Identificador de orden
                 <input type="text" 
