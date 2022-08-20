@@ -1,6 +1,11 @@
+import { 
+    getDoc,
+    getFirestore,
+    doc,
+} from "firebase/firestore";
 
 const getOrder = (setState, id) =>{
-    //Fetches a single doc from the item collection
+    //Fetches a single doc from the orders collection
     //stored at firebase Cloud Firestore
     const db = getFirestore();
     const queryProduct = doc(db, 'orders', id);

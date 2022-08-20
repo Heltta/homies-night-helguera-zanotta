@@ -13,7 +13,15 @@ function MyOrderContainer(){
     },[order]);
     
     return(
-        <form onSubmit={getOrder(setOrder(), orderId)}>
+        <form onSubmit={
+            (e)=>{
+                getOrder(
+                    (fbData)=> {
+                        setOrder(fbData);
+                    },
+                    orderId);
+                e.preventDefault();
+            }}>
             <label>
                 Identificador de orden
                 <input type="text" 

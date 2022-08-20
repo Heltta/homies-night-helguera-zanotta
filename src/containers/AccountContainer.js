@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom"
 
+import MyOrderContainer from "./MyOrderContainer";
+
 function AccountContainer (){
     const { id } = useParams();
     if(id === 'signin'){
@@ -21,6 +23,7 @@ function AccountContainer (){
         return(
             <section>
                 Ver orden
+                <MyOrderContainer/>
             </section>
         )
     }
