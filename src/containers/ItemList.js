@@ -1,7 +1,8 @@
 import React from "react"
 import Item from "../components/Item";
+import { memo } from "react";
 
-function ItemsList({products}) {
+const ItemsList = memo( ({products}) => {
     return (
         <ul className="productList">
             {products.map(prod => <Item 
@@ -13,6 +14,6 @@ function ItemsList({products}) {
                 photo={prod.photo} /> ) }
         </ul>
     )
-};
+})
 
 export default ItemsList
