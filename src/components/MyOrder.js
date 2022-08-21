@@ -1,7 +1,8 @@
 import MyOrderItem from "../components/MyOrderItem"
 import { getItem } from "../helpers/getProducts"
+import { memo } from "react";
 
-function MyOrder ({order}){
+const MyOrder = memo(({order}) => {
 
     return(
         <>
@@ -14,6 +15,6 @@ function MyOrder ({order}){
             <span>{`Subtotal: $${order.total}`}</span>
         </>
     )
-}
+})
 
 export default MyOrder
