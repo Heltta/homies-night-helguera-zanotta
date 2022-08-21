@@ -1,6 +1,8 @@
 import { useCartContext } from "../context/CartContext";
 import CartItem from "../components/CartItem"
-function Cart (){
+import { memo } from "react";
+
+const Cart = memo(() => {
 
     const {
         cartList,
@@ -13,6 +15,6 @@ function Cart (){
                 item={prod} />)}
         </ul>
     )
-}
+})
 
 export default Cart
