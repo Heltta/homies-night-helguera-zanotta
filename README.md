@@ -1,4 +1,41 @@
+# Homies Night e-commerce
+
+"Homies Night e-commerce" is my final project for [Coderhouse](https://www.coderhouse.com.uy/)'s React course. It consist of a website build with ReactJS for a hypothetical electronic commerce named "Homies Night".
+
 ![Website navigation](react-proy-nav.gif)
+
+## Installation
+
+1. Install [NodeJSv16](https://nodejs.org/en/) (includes npm)
+2. Use the package manage npm to install needed modules inside the project directory 
+```bash
+npm install
+```
+3. Run script to start hosting development build
+```bash
+npm start
+```
+
+## Dependencies
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "4.1.1",
+    "create-react-app": "^5.0.1",
+    "firebase": "^9.9.1",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "sweetalert2": "11.4.26",
+    "web-vitals": "^2.1.4"
+
+### Dependencies short description
+
+* **React:** Main engine of the project.
+* **SweetAlert:** Library used for toasts and alerts.
+* **Animate.css:** Library used to animate components.
+* **Firebase:** Google firebase API. Mainly used for fetching data from its firestore.
 
 # Getting Started with Create React App
 
