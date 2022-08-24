@@ -1,6 +1,10 @@
 .itemListContainer{
     background-color: #13110E;
     color: #FFFFFF;
+
+    /*min height must be enough to fill screen*/
+    /*(68px is equal no navbar height)*/
+    min-height: calc(100vh - 68px);
 }
     .itemListContainer section .productList{
         display: flex;
