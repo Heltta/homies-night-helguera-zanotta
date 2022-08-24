@@ -90,7 +90,7 @@
             font-size: 2rem;
             margin-inline-start: 1rem;
         }
-    .cartList .subTotal{
+    .cartList .subtotal{
         display: flex;
         flex-direction: row;
         justify-content: space-between;

@@ -7,7 +7,7 @@ function CartSubtotal({children}){
     } = useCartContext();
 
     return(
-        <div className="subTotal">
+        <div className="subtotal">
             {children}
             <span>{`Subtotal (items ${cartSize()}): $${cartCost()}`}</span>
         </div>
