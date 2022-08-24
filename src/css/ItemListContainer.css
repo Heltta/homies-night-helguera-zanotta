@@ -6,11 +6,9 @@
         display: flex;
         flex-wrap: wrap;
         padding: 1rem;
+        margin: 0 1rem;
 
         list-style: none;
-    }
-    .itemListContainer #breeadcrumbs{
-        padding: 2rem;
     }
         .itemListContainer section .productList li{
             padding: 1rem;
