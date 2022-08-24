@@ -1,0 +1,38 @@
+.itemDetail{
+    background-color: #13110E;
+    color: #FFFFFF;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    width: fit-content;
+    display: flex;
+}
+    .itemDetail img{
+        margin: 1rem;
+    }
+    .itemDetail section{
+        max-width: 50vh;
+    }
+    .itemDetail section div{
+        margin: 1rem;
+    }
+    .itemDetail section div:first-child{
+        font-size: 2rem;
+    }
+    .itemDetail .content a button{
+                
+        padding: 2.5px 5.5px;
+        border-radius: 5px;
+        border: 0;
+        margin: 1px;
+
+        font-style: normal;
+        font-size: inherit;
+        line-height: inherit;
+
+        color: #FFFFFF;
+        background-color: #E46A0D;
+    }
+        .itemDetail .content a button:hover{
+            color: #082C4E;
+        }
