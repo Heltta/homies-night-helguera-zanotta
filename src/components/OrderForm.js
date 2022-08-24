@@ -17,14 +17,23 @@ function OrderForm(){
 
     
     const validMail = () => {
-        return (emailCheck === email)
+        return (email.length !== 0) && (emailCheck === email);
+    }
+
+    const validPhone = () => {
+        return (phone.length !== 0) && !isNaN(phone);
+    }
+
+    const validName = () =>{
+        return (name.length !== 0) && isNaN(name);
     }
 
     const handleSubmit = (event) => {
-        if(validMail()){
+        event.preventDefault();
+        if(validMail() && validPhone() && validName()){
             saveBuyer({
                 name:name,
-                phone:phone,
+                phone:parseInt(phone),
                 email:email,
             });
             Swal.fire({
@@ -36,7 +45,24 @@ function OrderForm(){
                 timer: 4000,
                 timerProgressBar: true,
               })
-        }else{
+        }
+        else if(!validName()){
+            Swal.fire({
+                title: 'Error',
+                text: 'Nombre no válido',
+                icon: 'error',
+                showConfirmButton: true,
+            })
+        }
+        else if(!validPhone()){
+            Swal.fire({
+                title: 'Error',
+                text: 'Teléfono no válido',
+                icon: 'error',
+                showConfirmButton: true,
+            })
+        }
+        else{
             Swal.fire({
                 title: 'Error',
                 text: 'Email no válido',
@@ -44,7 +70,6 @@ function OrderForm(){
                 showConfirmButton: true,
             })
         }
-        event.preventDefault();
     }
 
     return(
