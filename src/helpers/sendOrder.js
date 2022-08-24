@@ -6,8 +6,6 @@ const sendOrder = (order) =>{
     const ordersColl = collection(db, "orders");
 
     addDoc(ordersColl,order).then((resp) =>{
-        console.log(order);
-        console.log(resp);
         Swal.fire({
             title: 'Orden generada',
             icon: 'success',

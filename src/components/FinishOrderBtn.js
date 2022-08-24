@@ -17,10 +17,6 @@ function FinishOrderBtn(){
     
 
     const finishHandler = () =>{
-        console.log('finishHandler');
-        console.log(buyer);
-        console.log(buyerItems);
-        console.log(order);
         sendOrder(buildOrder());
         resetOrder();
         clearCart();

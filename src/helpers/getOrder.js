@@ -14,7 +14,6 @@ const getOrder = (setState, id) =>{
     const queryProduct = doc(db, 'orders', id);
     getDoc(queryProduct)
         .then(resp => {
-            console.log(`Doc exists? ${resp.exists()}`);
             //If doc doesn't exist, then set id to null
             (resp.exists())? 
                 (setState ( { id: resp.id, ...resp.data() } ))

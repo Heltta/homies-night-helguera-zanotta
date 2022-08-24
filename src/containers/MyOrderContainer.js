@@ -6,11 +6,6 @@ import MyOrder from "../components/MyOrder";
 function MyOrderContainer(){
     const [order, setOrder] = useState();
 
-    useEffect(()=>{
-        //Placeholder useEffect function
-        console.log(`Mount or "order" change`);
-        console.log(order);
-    },[order]);
     
     return( 
         <>
