@@ -17,10 +17,6 @@
 
             border-color: #643206;
         }
-        .itemListContainer section .productList a{
-            display: block;
-            margin: 0.5rem 0 0 0;
-        }
         .itemListContainer section .productList a button{
             width: 100%;
             
@@ -38,6 +34,39 @@
             .itemListContainer section .productList a button:hover{
                 color: #082C4E;
             }
-.producto div span{
-    padding: 1rem;
+
+.product{
+    display: grid;
+    grid-template-areas: 
+                    ".      name    ."
+                    "photo  photo   photo"
+                    "stock  detail  price";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 2fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    
+    max-width: fit-content;
 }
+    .product .name{
+        grid-area: name;
+
+        font-size: 1.5rem;
+    }
+    .product .price{
+        grid-area: price;
+    }
+    .product .stock{
+        grid-area: stock;
+    }
+    .product .photo{
+        grid-area: photo;
+        
+        max-height: 200px;
+    }
+    .product .detail{
+        grid-area: detail;
+        
+        width: 100%;
+    }
