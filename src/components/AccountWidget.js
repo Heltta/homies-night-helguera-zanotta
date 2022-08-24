@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from 'react'
 import profile from '../assets/images/profile.svg'
-import AccountPopUp from './AccountPopUp';
+import { Link } from 'react-router-dom'
 
 function AccountWidget(){
     const [openMenu, setOpenMenu] = useState(false);
@@ -20,13 +20,9 @@ function AccountWidget(){
 
     return(
         <>
-            <button id="UserProfile" onClick={(e)=>{
-                e.stopPropagation();
-                setOpenMenu(true);
-                }}>
+            <Link id="UserProfile" to='/account/checkorder'>
                 <img src={profile} alt="profile"/>
-            </button>
-            {(openMenu) && (<AccountPopUp/>)}
+            </Link>
         </>
     )
 }
