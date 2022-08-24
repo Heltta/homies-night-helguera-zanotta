@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import '../css/ItemListContainer.css'
-import ItemList from './ItemList.js'
+import ItemList from '../components/ItemList'
 import { getCollection } from "../helpers/getProducts";
 import {useParams} from "react-router-dom"
 import Loading from "../components/Loading"
