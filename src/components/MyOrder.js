@@ -2,18 +2,20 @@ import MyOrderItem from "../components/MyOrderItem"
 import { getItem } from "../helpers/getProducts"
 import { memo } from "react";
 
+import "../css/MyOrder.css"
+
 const MyOrder = memo(({order}) => {
 
     return(
-        <>
-            <span>{`Identificador de orden: ${order.id}`}</span>
-            <ul>
-                {order.items.map(prod => <MyOrderItem  
+        <section className="myOrder">
+            <h2 className="orderID">{`Identificador de orden: `}<span>{`${order.id}`}</span></h2>
+            <ul className="orderItems">
+                {order.items.map(prod => <MyOrderItem
                     key={prod.id} 
                     item={prod} />)}
             </ul>
-            <span>{`Subtotal: $${order.total}`}</span>
-        </>
+            <div className="orderTotal">{`Subtotal: `}<span>{`$${order.total}`}</span></div>
+        </section>
     )
 })
 

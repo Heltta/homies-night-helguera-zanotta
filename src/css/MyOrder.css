@@ -1,0 +1,41 @@
+.myOrder{
+    display: block;
+    /*min height must be enough to fill screen*/
+    /*(68px is equal no navbar height)*/
+    height: fit-content;
+    padding: 1rem 2rem 0 2rem;
+    min-height: calc(100vh - 68px);
+
+    background-color: #13110E;
+    color: #FFFFFF;
+}
+    .myOrder .orderID, .myOrder .orderTotal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+
+        margin-top: 3rem;
+        padding: 1rem;
+        border: 2px solid;
+        border-radius: 1rem;
+
+        font-size: 1.5rem;
+
+        color: #E46A0D;
+        border-color: #082c4e;
+    }
+        .myOrder .orderID span, .myOrder .orderTotal span{
+            display: inline;
+            margin: 1rem;
+            font-size: 1rem;
+
+            color: #FFFFFF;
+        }
+    .myOrder .orderItems{
+        list-style: none;
+    }
+    .myOrder .orderTotal span{
+        font-size: inherit;
+    }

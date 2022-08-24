@@ -3,13 +3,10 @@ function MyOrderItem({item}){
     const {id, title, price, quantity} = {...item};
 
     return(
-        <li>
-            <h2 className="itemName">{title}</h2>
-            <img src={"/images/caja_spyfall.webp"} alt={`caja de ${title}`}/>
-            <span className="itemPrice"> Costo: ${price*quantity}</span>
-            <div className="cartItemUtility">
-                <span className="itemQuantity"> Cantidad: {quantity}</span>
-            </div>
+        <li className="item">
+            <h3 className="name">{title}</h3>
+            <div className="price"> Costo: ${price*quantity}</div>
+            <div className="itemQuantity"> Cantidad: {quantity}</div>
         </li>
     )
 }

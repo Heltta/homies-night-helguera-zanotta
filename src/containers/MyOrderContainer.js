@@ -14,8 +14,11 @@ function MyOrderContainer(){
     
     return( 
         <>
-            <MyOrderForm setState={setOrder}/>
-            {order && (<MyOrder order={order}/>)}
+            {(order)? 
+                (<MyOrder order={order}/>)
+                :
+                <MyOrderForm setState={setOrder}/>
+                }
         </>
     );
 }

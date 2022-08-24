@@ -21,10 +21,9 @@ function AccountContainer (){
     else{
         //id is equal to 'checkorder'
         return(
-            <section>
-                Ver orden
+            <>
                 <MyOrderContainer/>
-            </section>
+            </>
         )
     }
 }
