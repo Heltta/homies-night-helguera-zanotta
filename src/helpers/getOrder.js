@@ -4,7 +4,7 @@ import {
     doc,
 } from "firebase/firestore";
 
-const getOrder = (setState, id) =>{
+const getOrder = (setState, id, notFoundHandler) =>{
     //Fetches a single doc from the orders collection
     //stored at firebase Cloud Firestore
     //Returns the document with the corresponding id
@@ -18,11 +18,11 @@ const getOrder = (setState, id) =>{
             (resp.exists())? 
                 (setState ( { id: resp.id, ...resp.data() } ))
                 :
-                (setState ( null ))
+                (notFoundHandler ( ))
             
     })
         .catch(error => console.log(error));
-    return
+    return 
 }
 
 export default getOrder

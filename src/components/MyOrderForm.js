@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../css/OrderForm.css'
 
 import getOrder from "../helpers/getOrder";
+import Swal from "sweetalert2";
 
 function MyOrderForm({ setState }){
     const [orderId, setOrderId] = useState('');
@@ -13,13 +14,29 @@ function MyOrderForm({ setState }){
                 (fbData)=> {
                     setState(fbData);
                 },
-                orderId);
+                orderId,
+                () => Swal.fire({
+                    title: 'Atención',
+                    text: 'Orden no encontrada',
+                    icon: 'warning',
+                    showConfirmButton: true,
+                }));
         }
         else{
-            (orderId === '' )? 
-                console.log('You must write an id')
+            (orderId === '' )?
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Ingrese un identificador',
+                    icon: 'error',
+                    showConfirmButton: true,
+                })
                 :
-                console.log(`${orderId} is not a valid id`)
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Identificador no válido',
+                    icon: 'error',
+                    showConfirmButton: true,
+                })
                 ;
         }
     }
