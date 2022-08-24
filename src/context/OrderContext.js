@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useCartContext } from "./CartContext";
 
 const OrderContext = createContext([]);
@@ -14,6 +14,10 @@ function OrderContextProvider({children}){
         cartList,
         cartCost,
     } = useCartContext();
+    
+    useEffect(()=>{
+        setBuyerItems([]);
+    },[cartList])
 
     const saveBuyer = ({name,phone,email}) =>{
         setBuyer({

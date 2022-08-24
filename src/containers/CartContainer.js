@@ -31,8 +31,13 @@ function CartContainer(){
     return(
             <section className="cartList">
                 <Cart />
-                <CartSubtotal children={<ClearCartBtn />}/>
-                <CartMakeOrder />
+                <CartSubtotal children={
+                    <>
+                        <ClearCartBtn />
+                        <CartMakeOrder />
+                    </>
+                }/>
+                
                 {!isBuyerItemsEmpty() && <OrderForm 
                     children={!isBuyerEmpty() && <FinishOrderBtn />}/>}
             </section>
