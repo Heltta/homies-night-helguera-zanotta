@@ -33,9 +33,40 @@
 
             color: #FFFFFF;
         }
+        .myOrder .orderTotal span{
+            font-size: inherit;
+        }
     .myOrder .orderItems{
         list-style: none;
+        max-width: 500px;
     }
-    .myOrder .orderTotal span{
-        font-size: inherit;
-    }
+        .myOrder .orderItems .item{
+            display: grid;
+            grid-template-areas: 
+                    "name id"
+                    "quantity price";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr;
+            align-items: baseline;
+
+            margin: 1.5rem 0;
+            padding: 0.5rem;
+            border: 2px;
+            border-style: dashed none;
+
+            border-color: #E46A0D;
+        }
+        .myOrder .orderItems .item .name{
+            grid-area: name;
+
+            font-size: 1.25rem;
+        }
+        .myOrder .orderItems .item .itemID{
+            grid-area: id;
+        }
+        .myOrder .orderItems .item .price{
+            grid-area: price;
+        }
+        .myOrder .orderItems .item .quantity{
+            grid-area: quantity;
+        }

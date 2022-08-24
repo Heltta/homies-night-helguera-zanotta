@@ -4,9 +4,10 @@ function MyOrderItem({item}){
 
     return(
         <li className="item">
-            <h3 className="name">{title}</h3>
+            <h3 className="name">Nombre: {title}</h3>
+            <div className="itemID"> ID: ${id}</div>
             <div className="price"> Costo: ${price*quantity}</div>
-            <div className="itemQuantity"> Cantidad: {quantity}</div>
+            <div className="quantity"> Cantidad: {quantity}</div>
         </li>
     )
 }
