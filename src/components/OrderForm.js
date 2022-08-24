@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { useOrderContext } from "../context/OrderContext";
 import '../css/OrderForm.css'
 
-function OrderForm(){
+function OrderForm({children}){
     const [email, setEmail] = useState('');
     const [emailCheck, setEmailCheck] = useState('');
     const [name, setName] = useState('');
@@ -108,6 +108,7 @@ function OrderForm(){
             </label>
 
             <input type="submit" value="Submit" />
+            {children}
         </form>
     );
 }

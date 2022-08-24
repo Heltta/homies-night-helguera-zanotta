@@ -105,3 +105,9 @@
         color: #FFFFFF;
 
     }
+button.finishOrderBtn{
+
+    animation: heartBeat; 
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}

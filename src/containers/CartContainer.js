@@ -33,8 +33,8 @@ function CartContainer(){
                 <Cart />
                 <CartSubtotal children={<ClearCartBtn />}/>
                 <CartMakeOrder />
-                {!isBuyerItemsEmpty() && <OrderForm />}
-                {!isBuyerEmpty() && <FinishOrderBtn />}
+                {!isBuyerItemsEmpty() && <OrderForm 
+                    children={!isBuyerEmpty() && <FinishOrderBtn />}/>}
             </section>
         );
 }

@@ -1,5 +1,4 @@
 import MyOrderItem from "../components/MyOrderItem"
-import { getItem } from "../helpers/getProducts"
 import { memo } from "react";
 
 import "../css/MyOrder.css"

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import MyOrderForm from "../components/MyOrderForm";
 import MyOrder from "../components/MyOrder";

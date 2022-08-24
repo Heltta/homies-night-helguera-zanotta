@@ -5,9 +5,6 @@ import sendOrder from "../helpers/sendOrder"
 function FinishOrderBtn(){
     const {
         isOrderEmpty,
-        buyer,
-        buyerItems,
-        order,
         buildOrder,
         resetOrder,
     } = useOrderContext();
@@ -24,7 +21,9 @@ function FinishOrderBtn(){
 
     if(isOrderEmpty()){
         return(
-            <button onClick={finishHandler}>Completar compra</button>
+            <button className="finishOrderBtn" onClick={finishHandler}>
+                Realizar compra
+            </button>
         );
     }else{
         return(<div>Orden no Vacía</div>);
