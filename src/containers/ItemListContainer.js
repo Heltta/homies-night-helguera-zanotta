@@ -5,7 +5,7 @@ import { getCollection } from "../helpers/getProducts";
 import {useParams} from "react-router-dom"
 import Loading from "../components/Loading"
 
-function ItemListContainer(props) {
+function ItemListContainer() {
     const [boardGames, setBoardGames] = useState([]);
     const [ loading, setLoading ] = useState(true);
     const { id } = useParams();
