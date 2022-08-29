@@ -42,8 +42,19 @@ const getCategory = (setState, id) =>{
         .catch(error => console.log(error));
 }
 
+const getAllCategories = (setState) =>{
+    //Fetches al category objects stored at firebase Cloud Firestore
+    const db = getFirestore();
+    const categoryColl = collection(db, 'collection');
+    getDocs(categoryColl)
+        .then(resp => setState ( resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })) ))
+        .catch(error => console.log(error));
+
+}
+
 export {
     getItem,
     getCollection,
     getCategory,
+    getAllCategories,
 }
