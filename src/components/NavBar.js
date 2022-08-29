@@ -1,6 +1,7 @@
 import logo from '../assets/images/logo.svg'
 import CartWidget from './CartWidget.js'
 import AccountWidget from './AccountWidget'
+import NavBarCategoriesList from './NavBarCategoriesList'
 import '../css/NavBar.css'
 import {Link} from 'react-router-dom'
 import { useCartContext } from "../context/CartContext";
@@ -31,14 +32,7 @@ const NavBar = () => {
           <img src={logo} alt="logo" />
           <span>Homies Night</span>
         </Link>
-        <nav>
-          <ul>
-            {categories.map(category => 
-                <li key={category.id} >
-                    <Link to={`/category/${category.filter}`} >{category.name}</Link>
-                </li> ) }
-          </ul>
-        </nav>
+        <NavBarCategoriesList categories={categories}/>
         <CartWidget emptyCart={!isCartEmpty()}/>
         <AccountWidget/>
       </header>
