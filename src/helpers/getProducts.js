@@ -36,7 +36,7 @@ const getCategory = (setState, id) =>{
     //"filter" is the identifier and determinates page URL
     //"name"   is the displayed name that any user will see at the navigation bar
     const db = getFirestore();
-    const queryProduct = doc(db, 'collection', id);
+    const queryProduct = doc(db, 'categories', id);
     getDoc(queryProduct)
         .then(resp => setState ( { id: resp.id, ...resp.data() } ))
         .catch(error => console.log(error));
@@ -45,7 +45,7 @@ const getCategory = (setState, id) =>{
 const getAllCategories = (setState) =>{
     //Fetches al category objects stored at firebase Cloud Firestore
     const db = getFirestore();
-    const categoryColl = collection(db, 'collection');
+    const categoryColl = collection(db, 'categories');
     getDocs(categoryColl)
         .then(resp => setState ( resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })) ))
         .catch(error => console.log(error));
