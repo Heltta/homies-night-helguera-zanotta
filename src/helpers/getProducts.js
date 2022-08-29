@@ -29,15 +29,21 @@ const getCollection = (setState, category) =>{
     return
 }
 
-const getCategory = () =>{
+const getCategory = (setState, id) =>{
     //Fetches a category object from firebase Cloud Firestore
     //The object structure as follows: {banner, filter, name}
     //"banner" is the message that will be displayed as the page header
     //"filter" is the identifier and determinates page URL
     //"name"   is the displayed name that any user will see at the navigation bar
+    const db = getFirestore();
+    const queryProduct = doc(db, 'collection', id);
+    getDoc(queryProduct)
+        .then(resp => setState ( { id: resp.id, ...resp.data() } ))
+        .catch(error => console.log(error));
 }
 
 export {
     getItem,
     getCollection,
+    getCategory,
 }
