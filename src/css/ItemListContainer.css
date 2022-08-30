@@ -6,6 +6,13 @@
     /*(68px is equal no navbar height)*/
     min-height: calc(100vh - 68px);
 }
+    .itemListContainer .listHeader{
+        display: block;
+        padding: 1rem;
+
+        font-size: 2rem;
+        text-align: center;
+    }
     .itemListContainer section .productList{
         display: flex;
         flex-wrap: wrap;

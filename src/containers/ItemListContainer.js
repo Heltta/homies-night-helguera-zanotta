@@ -35,7 +35,7 @@ function ItemListContainer() {
             <Loading />
             : 
             <div className="itemListContainer">
-                <h1>{listheader}</h1>
+                <h1 className="listHeader">{listheader}</h1>
                 <section>
                     <ItemList products={boardGames} />
                 </section>
