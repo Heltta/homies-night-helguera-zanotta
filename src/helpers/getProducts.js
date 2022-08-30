@@ -29,16 +29,18 @@ const getCollection = (setState, category) =>{
     return
 }
 
-const getCategory = (setState, id) =>{
+const getCategory = (setState, filter) =>{
     //Fetches a category object from firebase Cloud Firestore
-    //The object structure as follows: {banner, filter, name}
+    //The category object structure as follows: {banner, filter, name}
+    //getCategory() will find the category using its filter instead of its id
     //"banner" is the message that will be displayed as the page header
     //"filter" is the identifier and determinates page URL
     //"name"   is the displayed name that any user will see at the navigation bar
     const db = getFirestore();
-    const queryProduct = doc(db, 'categories', id);
-    getDoc(queryProduct)
-        .then(resp => setState ( { id: resp.id, ...resp.data() } ))
+    const collQuery = query(collection(db, 'categories'), where("filter", "==",  filter));
+    getDocs(collQuery)
+        //Filter value is unique, then docs.lenght is equal to 1
+        .then(resp => setState ( resp.docs[0].data().banner  ))
         .catch(error => console.log(error));
 }
 
