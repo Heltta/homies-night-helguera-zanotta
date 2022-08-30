@@ -38,7 +38,7 @@ const NavBar = () => {
             <Loading />
             :
             <NavBarCategoriesList categories={categories}/>}
-        <CartWidget emptyCart={!isCartEmpty()}/>
+        <CartWidget emptyCart={isCartEmpty()}/>
         <AccountWidget/>
       </header>
       );

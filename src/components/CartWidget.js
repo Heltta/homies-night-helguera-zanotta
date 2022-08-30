@@ -9,7 +9,7 @@ function CartWidget({ emptyCart = false }){
     return(
         <>
             <Link id="cartwidget" to='/cart'>
-                {(emptyCart) && <span>{cartSize()}</span>}
+                {(!emptyCart) && <span>{cartSize()}</span>}
                 <img src={cart} alt='shopping cart'></img>
             </Link>
         </>
